@@ -164,7 +164,7 @@ export function Contact() {
           >
             <h3 className="font-display text-2xl font-bold">Visit the Lab</h3>
             <p className="mt-1 text-sm text-muted-foreground">
-              Robotics Club Headquarters — Engineering Block
+              Robotics Club Headquarters — Mechanical Block
             </p>
 
             <ul className="mt-5 space-y-3 text-sm">

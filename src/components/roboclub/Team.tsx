@@ -42,8 +42,9 @@ const team: Member[] = [
     role: "Vice President",
     meta: "MECH — III Year",
     phone: "6383651679",
-    linkedIn: "https://www.linkedin.com/in/maha-lakshmi-m-416194295/",
-    mail: "[EMAIL_ADDRESS]",
+    image: "/maha.jpeg",
+    linkedIn: "https://www.linkedin.com/in/maha-lakshmi-237a44363/",
+    mail: "mahasaranya0507@gmail.com",
     github: "https://github.com/varul-mech"
   },
   {
@@ -71,8 +72,9 @@ const team: Member[] = [
     role: "Treasurer",
     meta: "MECH — III Year",
     phone: "6380705052",
+    image: "/jashwin.jpeg",
     linkedIn: "https://www.linkedin.com/in/jashwin-s-6a488a29a/",
-    mail: "[EMAIL_ADDRESS]",
+    mail: "jashwinliebart@gmail.com",
     github: "https://github.com/varul-mech"
   },
   {
