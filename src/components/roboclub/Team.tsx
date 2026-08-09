@@ -14,38 +14,49 @@ type Member = {
   accent?: boolean;
 };
 
-const advisor: Member = {
-  name: "Mr. V. Arul",
-  role: "Faculty Advisor & Club Incharge",
-  meta: "Faculty",
-  phone: "9047290488",
-  image: "/arul.jpg",
-  linkedIn: "https://www.linkedin.com/in/v-arul-7874444a/",
-  mail: "[EMAIL_ADDRESS]",
-  github: "https://github.com/varul-mech",
-  accent: true,
-};
+const advisors: Member[] = [
+  {
+    name: "Dr.M.THIYAGU",
+    role: "Faculty Advisor & Club Incharge",
+    meta: "Faculty",
+    phone: "9600137609",
+    image: "/incharge1.png",
+    accent: true,
+  },
+  {
+    name: "DR.R.MAHALAKSHMI",
+    role: "Faculty Advisor & Club Mentor",
+    meta: "Faculty",
+    phone: "8015761669",
+    image: "/incharge2.png",
+    linkedIn: "",
+    mail: "",
+    github: "",
+    accent: true,
+  },
+];
+
 
 const team: Member[] = [
   {
-    name: "Santhosh Kumar M",
+    name: "KS VIGNESH",
     role: "President",
-    meta: "MECH — III Year",
-    phone: "7305422329",
-    image:"/santhosh.jpg",
-    linkedIn: "https://www.linkedin.com/in/san",
-    mail: "[EMAIL_ADDRESS]",
-    github: "https://github.com/varul-mech"
+    meta: "EEE — III Year",
+    phone: "9342710667",
+    image:"/vignesh.jpg",
+    linkedIn: "",
+    mail: "",
+    github: ""
   },
   {
-    name: "Maha Lakshmi M",
+    name: "Santhosh Kumar M",
     role: "Vice President",
     meta: "MECH — III Year",
-    phone: "6383651679",
-    image: "/maha.jpeg",
-    linkedIn: "https://www.linkedin.com/in/maha-lakshmi-237a44363/",
-    mail: "mahasaranya0507@gmail.com",
-    github: "https://github.com/varul-mech"
+    phone: "7305422329",
+    image: "/santhosh.jpg",
+    linkedIn: "",
+    mail: "",
+    github: ""
   },
   {
     name: "Monishwaran K",
@@ -53,50 +64,37 @@ const team: Member[] = [
     meta: "MECH — III Year",
     phone: "7358996358",
     image: "/monishwaran.jpg",
-    linkedIn: "https://www.linkedin.com/in/monishwaran-k-b463a3363/",
-    mail: "k.monishwaran123@gmail.com",
-    github: "https://github.com/Monishwarann",
   },
   {
-    name: "Jai Ashwin R M",
+    name: "SAI BALAJI BS",
     role: "Joint Secretary",
-    meta: "MECH — II Year",
-    phone: "9342643672",
-    image: "/jai ashwin.jpg",
-    linkedIn: "https://www.linkedin.com/in/jai-ashwin-r-m-0b3671306/",
-    mail: "[EMAIL_ADDRESS]",
-    github: "https://github.com/varul-mech"
+    meta: "EEE — III Year",
+    phone: "81481 86421",
+    image: "/sai 1.png",
+    linkedIn: "",
+    mail: "",
+    github: ""
   },
   {
     name: "Jashwin S",
     role: "Treasurer",
     meta: "MECH — III Year",
     phone: "6380705052",
-    image: "/jashwin.jpeg",
-    linkedIn: "https://www.linkedin.com/in/jashwin-s-6a488a29a/",
-    mail: "jashwinliebart@gmail.com",
-    github: "https://github.com/varul-mech"
+    image: "/jaswin.png",
+    linkedIn: "",
+    mail: "",
+    github: ""
   },
   {
-    name: "Akshayan S",
+    name: "KIRTI R",
     role: "Joint Treasurer",
-    meta: "MECH — II Year",
-    phone: "9585689708",
-    image: "/akshayan.jpg",
-    linkedIn: "https://www.linkedin.com/in/akshayan-s-5749a026b/",
-    mail: "[EMAIL_ADDRESS]",
-    github: "https://github.com/varul-mech"
-  },
-  {
-    name: "Mahati S",
-    role: "Overall Coordinator",
-    meta: "MECH — II Year",
-    phone: "9840712679",
-    image: "/mahati.jpg",
-    linkedIn: "https://www.linkedin.com/in/mahati-s-720b76299/",
-    mail: "[EMAIL_ADDRESS]",
-    github: "https://github.com/varul-mech"
-  },
+    meta: "EEE — III Year",
+    phone: "93818 02034",
+    image: "/Joint-Treasurer.jpeg",
+    linkedIn: "",
+    mail: "",
+    github: "",
+  }
 ];
 
 function initials(name: string) {
@@ -115,7 +113,7 @@ function MemberCard({ m, i, large = false }: { m: Member; i: number; large?: boo
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.5, delay: (i % 4) * 0.08 }}
+      transition={{ duration: 0.5, delay: (i % 3) * 0.08 }}
       className="glass group relative overflow-hidden rounded-3xl text-center transition hover:-translate-y-1 hover:shadow-neon"
     >
       <div className="absolute inset-x-0 -top-24 mx-auto h-48 w-48 rounded-full bg-[var(--neon)]/15 blur-3xl transition group-hover:bg-[var(--neon)]/30" />
@@ -204,13 +202,15 @@ export function Team() {
           description="Builders, organizers, and engineers driving the Robotics Club mission forward."
         />
 
-        <div className="mt-14 grid place-items-center">
-          <div className="w-full max-w-md">
-            <MemberCard m={advisor} i={0} large />
-          </div>
+        <div className="mt-14 flex flex-wrap justify-center gap-6">
+          {advisors.map((adv, idx) => (
+            <div key={adv.name || idx} className="w-full max-w-md">
+              <MemberCard m={adv} i={idx} large />
+            </div>
+          ))}
         </div>
 
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {team.map((m, i) => (
             <MemberCard key={m.name} m={m} i={i + 1} />
           ))}

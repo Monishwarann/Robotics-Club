@@ -1,57 +1,65 @@
 import { useState } from "react";
+import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, Send } from "lucide-react";
 import { SectionHeader } from "./Section";
-import emailjs from "@emailjs/browser";
 import { toast } from "sonner";
 
+type ContactFormData = {
+  name: string;
+  email: string;
+  message: string;
+};
+
 const contacts = [
-  { role: "President", name: "Santhosh Kumar M", phone: "7305422329" },
-  { role: "Vice President", name: "Maha Lakshmi M", phone: "6383651679" },
+  { role: "President", name: "KS Vignesh", phone: "9342710667" },
+  { role: "Vice President", name: "Santhosh Kumar M", phone: "7305422329" },
   { role: "Secretary", name: "Monishwaran K", phone: "7358996358" },
 ];
 
+const FORMSPREE_URL =
+  import.meta.env.VITE_FORMSPREE_URL ||
+  (import.meta.env.VITE_FORMSPREE_ID
+    ? `https://formspree.io/f/${import.meta.env.VITE_FORMSPREE_ID}`
+    : "https://formspree.io/f/mnpankor");
+
 export function Contact() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [sent, setSent] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm<ContactFormData>();
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'VmNLMoJOgeE3nn6EB';
-    
-    if (publicKey === 'PUBLIC_KEY') {
-      toast.error("Please replace 'PUBLIC_KEY' with your actual EmailJS Public Key.");
-      setLoading(false);
-      return;
-    }
+  const onSubmit = async (data: ContactFormData) => {
+    setIsSubmitting(true);
 
-    setLoading(true);
     try {
-      await emailjs.send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_cvt36sd',
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_4nhbzpg',
-        {
-          from_name: name,
-          from_email: email,
-          message: message,
+      const response = await fetch(FORMSPREE_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
         },
-        publicKey
-      );
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          message: data.message,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send message");
+      }
+
       toast.success("Message sent successfully!");
-      setSent(true);
-      setName("");
-      setEmail("");
-      setMessage("");
-      setTimeout(() => setSent(false), 5000);
-    } catch (error: any) {
+      reset();
+    } catch (error) {
       console.error(error);
-      const errorMsg = error?.text || error?.message || "Please try again.";
-      toast.error(`Failed to send message: ${errorMsg}`);
+      toast.error("Unable to send message. Please try again.");
     } finally {
-      setLoading(false);
+      setIsSubmitting(false);
     }
   };
 
@@ -93,7 +101,7 @@ export function Contact() {
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            onSubmit={handleSubmit}
+            onSubmit={handleSubmit(onSubmit)}
             className="glass rounded-3xl p-7"
           >
             <h3 className="font-display text-2xl font-bold">Send a Message</h3>
@@ -107,51 +115,57 @@ export function Contact() {
                   Name
                 </label>
                 <input
-                  required
+                  {...register("name", { required: "Name is required" })}
                   type="text"
-                  name="name"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
                   className="rounded-xl bg-[var(--input)] px-4 py-3 text-sm outline-none ring-1 ring-transparent transition focus:ring-[var(--neon)]"
                   placeholder="Your full name"
                 />
+                {errors.name && (
+                  <span className="text-xs text-red-400">{errors.name.message}</span>
+                )}
               </div>
               <div className="grid gap-1.5">
                 <label className="text-xs uppercase tracking-widest text-muted-foreground">
                   Email
                 </label>
                 <input
-                  required
+                  {...register("email", {
+                    required: "Email is required",
+                    pattern: {
+                      value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                      message: "Invalid email address",
+                    },
+                  })}
                   type="email"
-                  name="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
                   className="rounded-xl bg-[var(--input)] px-4 py-3 text-sm outline-none ring-1 ring-transparent transition focus:ring-[var(--neon)]"
                   placeholder="you@college.edu"
                 />
+                {errors.email && (
+                  <span className="text-xs text-red-400">{errors.email.message}</span>
+                )}
               </div>
               <div className="grid gap-1.5">
                 <label className="text-xs uppercase tracking-widest text-muted-foreground">
                   Message
                 </label>
                 <textarea
-                  required
-                  name="message"
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
+                  {...register("message", { required: "Message is required" })}
                   rows={5}
                   className="rounded-xl bg-[var(--input)] px-4 py-3 text-sm outline-none ring-1 ring-transparent transition focus:ring-[var(--neon)]"
                   placeholder="Tell us about your idea or question…"
                 />
+                {errors.message && (
+                  <span className="text-xs text-red-400">{errors.message.message}</span>
+                )}
               </div>
 
               <button
                 type="submit"
-                disabled={loading}
+                disabled={isSubmitting}
                 className="mt-2 inline-flex items-center justify-center gap-2 rounded-xl bg-[var(--gradient-neon)] px-5 py-3 text-sm font-semibold text-white shadow-neon transition hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 <Send className="h-4 w-4" />
-                {loading ? "Sending..." : sent ? "Message Sent ✓" : "Submit"}
+                {isSubmitting ? "Sending..." : "Submit"}
               </button>
             </div>
           </motion.form>

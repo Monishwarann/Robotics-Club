@@ -26,25 +26,25 @@ function NotFoundComponent() {
 			className: "max-w-md text-center",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", {
-					className: "text-7xl font-bold text-foreground",
-					children: "404"
-				}),
+				className: "text-7xl font-bold text-foreground",
+				children: "404"
+			}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-					className: "mt-4 text-xl font-semibold text-foreground",
-					children: "Page not found"
-				}),
+				className: "mt-4 text-xl font-semibold text-foreground",
+				children: "Page not found"
+			}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					className: "mt-2 text-sm text-muted-foreground",
-					children: "The page you're looking for doesn't exist or has been moved."
-				}),
+				className: "mt-2 text-sm text-muted-foreground",
+				children: "The page you're looking for doesn't exist or has been moved."
+			}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "mt-6",
-					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
-						to: "/",
-						className: "inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90",
-						children: "Go home"
-					})
+				className: "mt-6",
+				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+					to: "/",
+					className: "inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90",
+					children: "Go home"
 				})
+			})
 			]
 		})
 	});
@@ -61,28 +61,28 @@ function ErrorComponent({ error, reset }) {
 			className: "max-w-md text-center",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", {
-					className: "text-xl font-semibold tracking-tight text-foreground",
-					children: "This page didn't load"
-				}),
+				className: "text-xl font-semibold tracking-tight text-foreground",
+				children: "This page didn't load"
+			}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					className: "mt-2 text-sm text-muted-foreground",
-					children: "Something went wrong on our end. You can try refreshing or head back home."
-				}),
+				className: "mt-2 text-sm text-muted-foreground",
+				children: "Something went wrong on our end. You can try refreshing or head back home."
+			}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "mt-6 flex flex-wrap justify-center gap-2",
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
-						onClick: () => {
-							router.invalidate();
-							reset();
-						},
-						className: "inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90",
-						children: "Try again"
-					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-						href: "/",
-						className: "inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent",
-						children: "Go home"
-					})]
-				})
+				className: "mt-6 flex flex-wrap justify-center gap-2",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+					onClick: () => {
+						router.invalidate();
+						reset();
+					},
+					className: "inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90",
+					children: "Try again"
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+					href: "/",
+					className: "inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent",
+					children: "Go home"
+				})]
+			})
 			]
 		})
 	});
@@ -144,7 +144,7 @@ var Route$1 = createRootRouteWithContext()({
 		links: [
 			{
 				rel: "icon",
-				href: "/logo.jpg",
+				href: "/logo.png",
 				type: "image/jpeg"
 			},
 			{
@@ -189,28 +189,32 @@ function RootComponent() {
 	});
 }
 var $$splitComponentImporter = () => import("./routes-DNjnvwia.mjs");
-var rootRouteChildren = { IndexRoute: createFileRoute("/")({
-	head: () => ({ meta: [
-		{ title: "Robotics Club — Build. Innovate. Engineer." },
-		{
-			name: "description",
-			content: "Robotics Club is a build-first college robotics ecosystem — events, executives, objectives, and projects that ship."
-		},
-		{
-			property: "og:title",
-			content: "Robotics Club — Engineering the Future"
-		},
-		{
-			property: "og:description",
-			content: "A build-first robotics ecosystem. Build. Innovate. Engineer."
-		}
-	] }),
-	component: lazyRouteComponent($$splitComponentImporter, "component")
-}).update({
-	id: "/",
-	path: "/",
-	getParentRoute: () => Route$1
-}) };
+var rootRouteChildren = {
+	IndexRoute: createFileRoute("/")({
+		head: () => ({
+			meta: [
+				{ title: "Robotics Club — Build. Innovate. Engineer." },
+				{
+					name: "description",
+					content: "Robotics Club is a build-first college robotics ecosystem — events, executives, objectives, and projects that ship."
+				},
+				{
+					property: "og:title",
+					content: "Robotics Club — Engineering the Future"
+				},
+				{
+					property: "og:description",
+					content: "A build-first robotics ecosystem. Build. Innovate. Engineer."
+				}
+			]
+		}),
+		component: lazyRouteComponent($$splitComponentImporter, "component")
+	}).update({
+		id: "/",
+		path: "/",
+		getParentRoute: () => Route$1
+	})
+};
 var routeTree = Route$1._addFileChildren(rootRouteChildren)._addFileTypes();
 var getRouter = () => {
 	return createRouter({

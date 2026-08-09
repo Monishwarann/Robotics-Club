@@ -13,46 +13,46 @@ function Background() {
 		children: [
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 grid-bg opacity-40 [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_75%)]" }),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.div, {
-				className: "absolute -top-32 -left-32 h-96 w-96 rounded-full bg-[var(--neon)]/20 blur-3xl",
-				animate: {
-					x: [
-						0,
-						60,
-						0
-					],
-					y: [
-						0,
-						40,
-						0
-					]
-				},
-				transition: {
-					duration: 14,
-					repeat: Infinity,
-					ease: "easeInOut"
-				}
-			}),
+			className: "absolute -top-32 -left-32 h-96 w-96 rounded-full bg-[var(--neon)]/20 blur-3xl",
+			animate: {
+				x: [
+					0,
+					60,
+					0
+				],
+				y: [
+					0,
+					40,
+					0
+				]
+			},
+			transition: {
+				duration: 14,
+				repeat: Infinity,
+				ease: "easeInOut"
+			}
+		}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.div, {
-				className: "absolute top-1/3 -right-32 h-[28rem] w-[28rem] rounded-full bg-[var(--neon-cyan)]/15 blur-3xl",
-				animate: {
-					x: [
-						0,
-						-60,
-						0
-					],
-					y: [
-						0,
-						-40,
-						0
-					]
-				},
-				transition: {
-					duration: 18,
-					repeat: Infinity,
-					ease: "easeInOut"
-				}
-			}),
-			Array.from({ length: 24 }).map((_, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.span, {
+			className: "absolute top-1/3 -right-32 h-[28rem] w-[28rem] rounded-full bg-[var(--neon-cyan)]/15 blur-3xl",
+			animate: {
+				x: [
+					0,
+					-60,
+					0
+				],
+				y: [
+					0,
+					-40,
+					0
+				]
+			},
+			transition: {
+				duration: 18,
+				repeat: Infinity,
+				ease: "easeInOut"
+			}
+		}),
+			Array.from({ length: 24 }).map((_, i) => /* @__PURE__ */(0, import_jsx_runtime.jsx)(motion.span, {
 				className: "absolute h-1 w-1 rounded-full bg-[var(--neon-cyan)]",
 				style: {
 					top: `${i * 37 % 100}%`,
@@ -127,39 +127,41 @@ function Nav() {
 				className: `glass flex items-center justify-between rounded-2xl px-4 py-3 transition-all sm:px-6 ${scrolled ? "shadow-neon" : ""}`,
 				children: [
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
-						href: "#home",
-						className: "flex items-center gap-2 group",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-							src: "/logo.jpg",
-							alt: "ROBOCLUB Logo",
-							className: "h-9 w-9 rounded-xl object-cover shadow-neon border border-[var(--neon)]/30 group-hover:scale-105 transition-transform"
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
-							className: "font-display text-lg font-bold tracking-widest",
-							children: ["ROBOTICS", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-								className: "text-gradient",
-								children: "CLUB"
-							})]
+					href: "#home",
+					className: "flex items-center gap-2 group",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+						src: "/logo.png",
+						alt: "ROBOCLUB Logo",
+						className: "h-9 w-9 rounded-xl object-cover shadow-neon border border-[var(--neon)]/30 group-hover:scale-105 transition-transform"
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+						className: "font-display text-lg font-bold tracking-widest",
+						children: ["ROBOTICS", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							className: "text-gradient",
+							children: "CLUB"
 						})]
-					}),
+					})]
+				}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
-						className: "hidden items-center gap-1 md:flex",
-						children: links$1.map((l) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+					className: "hidden items-center gap-1 md:flex",
+					children: links$1.map((l) => /* @__PURE__ */(0, import_jsx_runtime.jsx)("li", {
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
 							href: l.href,
 							className: "relative rounded-lg px-4 py-2 text-sm text-muted-foreground transition hover:text-foreground hover:bg-white/5",
 							children: l.label
-						}) }, l.href))
-					}),
+						})
+					}, l.href))
+				}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-						href: "#contact",
-						className: "hidden rounded-xl bg-[var(--gradient-neon)] px-4 py-2 text-sm font-semibold text-white shadow-neon transition hover:scale-105 md:inline-block",
-						children: "Join Now"
-					}),
+					href: "#contact",
+					className: "hidden rounded-xl bg-[var(--gradient-neon)] px-4 py-2 text-sm font-semibold text-white shadow-neon transition hover:scale-105 md:inline-block",
+					children: "Join Now"
+				}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
-						onClick: () => setOpen((v) => !v),
-						className: "rounded-lg p-2 text-foreground md:hidden",
-						"aria-label": "Toggle menu",
-						children: open ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(X, { className: "h-5 w-5" }) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Menu, { className: "h-5 w-5" })
-					})
+					onClick: () => setOpen((v) => !v),
+					className: "rounded-lg p-2 text-foreground md:hidden",
+					"aria-label": "Toggle menu",
+					children: open ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(X, { className: "h-5 w-5" }) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Menu, { className: "h-5 w-5" })
+				})
 				]
 			}), open && /* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.ul, {
 				initial: {
@@ -171,12 +173,14 @@ function Nav() {
 					y: 0
 				},
 				className: "glass mt-2 flex flex-col gap-1 rounded-2xl p-3 md:hidden",
-				children: links$1.map((l) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-					onClick: () => setOpen(false),
-					href: l.href,
-					className: "block rounded-lg px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-white/5",
-					children: l.label
-				}) }, l.href))
+				children: links$1.map((l) => /* @__PURE__ */(0, import_jsx_runtime.jsx)("li", {
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+						onClick: () => setOpen(false),
+						href: l.href,
+						className: "block rounded-lg px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-white/5",
+						children: l.label
+					})
+				}, l.href))
 			})]
 		})
 	});
@@ -219,68 +223,107 @@ function Hero() {
 				className: "flex flex-col items-center text-center max-w-4xl mx-auto",
 				children: [
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.div, {
-						initial: {
-							opacity: 0,
-							y: 20
-						},
-						animate: {
-							opacity: 1,
-							y: 0
-						},
-						transition: { duration: .6 },
-						className: "glass-neon inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-medium uppercase tracking-widest text-[var(--neon-cyan)]",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Sparkles, { className: "h-3.5 w-3.5" }), "Engineering the Future"]
-					}),
+					initial: {
+						opacity: 0,
+						y: 20
+					},
+					animate: {
+						opacity: 1,
+						y: 0
+					},
+					transition: { duration: .6 },
+					className: "glass-neon inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-medium uppercase tracking-widest text-[var(--neon-cyan)]",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Sparkles, { className: "h-3.5 w-3.5" }), "Engineering the Future"]
+				}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.h1, {
-						initial: {
-							opacity: 0,
-							y: 30
-						},
-						animate: {
-							opacity: 1,
-							y: 0
-						},
-						transition: {
-							duration: .7,
-							delay: .1
-						},
-						className: "font-display mt-6 text-5xl font-black leading-[0.95] sm:text-7xl lg:text-8xl",
-						children: [
-							"ROBOTICS",
+					initial: {
+						opacity: 0,
+						y: 30
+					},
+					animate: {
+						opacity: 1,
+						y: 0
+					},
+					transition: {
+						duration: .7,
+						delay: .1
+					},
+					className: "font-display mt-6 text-5xl font-black leading-[0.95] sm:text-7xl lg:text-8xl",
+					children: [
+						"ROBOTICS",
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-								className: "text-gradient",
-								children: "CLUB"
-							})
-						]
-					}),
+							className: "text-gradient",
+							children: "CLUB"
+						})
+					]
+				}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.p, {
-						initial: { opacity: 0 },
-						animate: { opacity: 1 },
-						transition: {
-							duration: .7,
-							delay: .25
-						},
-						className: "font-display mt-4 text-lg tracking-[0.4em] text-[var(--neon-cyan)]",
-						children: "BUILD · INNOVATE · ENGINEER"
-					}),
+					initial: { opacity: 0 },
+					animate: { opacity: 1 },
+					transition: {
+						duration: .7,
+						delay: .25
+					},
+					className: "font-display mt-4 text-lg tracking-[0.4em] text-[var(--neon-cyan)]",
+					children: "BUILD · INNOVATE · ENGINEER"
+				}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.p, {
-						initial: {
-							opacity: 0,
-							y: 20
-						},
-						animate: {
-							opacity: 1,
-							y: 0
-						},
-						transition: {
-							duration: .7,
-							delay: .35
-						},
-						className: "mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg mx-auto",
-						children: "A build-first engineering ecosystem where students consistently design, develop, and deploy intelligent systems that solve real-world problems."
-					}),
+					initial: {
+						opacity: 0,
+						y: 20
+					},
+					animate: {
+						opacity: 1,
+						y: 0
+					},
+					transition: {
+						duration: .7,
+						delay: .35
+					},
+					className: "mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg mx-auto",
+					children: "A build-first engineering ecosystem where students consistently design, develop, and deploy intelligent systems that solve real-world problems."
+				}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.div, {
+					initial: {
+						opacity: 0,
+						y: 20
+					},
+					animate: {
+						opacity: 1,
+						y: 0
+					},
+					transition: {
+						duration: .7,
+						delay: .45
+					},
+					className: "mt-8 flex flex-wrap justify-center gap-3",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
+						href: "#about",
+						className: "group inline-flex items-center gap-2 rounded-xl bg-[var(--gradient-neon)] px-6 py-3 text-sm font-semibold text-white shadow-neon transition hover:scale-105",
+						children: ["Explore More", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "h-4 w-4 transition group-hover:translate-x-1" })]
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
+						href: "#events",
+						className: "glass inline-flex items-center gap-2 rounded-xl px-6 py-3 text-sm font-semibold text-foreground transition hover:bg-white/10",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Calendar, { className: "h-4 w-4" }), "View Events"]
+					})]
+				}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "mt-16 grid grid-cols-3 gap-3 sm:gap-6 w-full max-w-2xl mx-auto",
+					children: [
+						{
+							n: 6,
+							l: "Planned Events"
+						},
+						{
+							n: 7,
+							l: "Core Executives"
+						},
+						{
+							n: 12,
+							l: "Objectives"
+						}
+					].map((s, i) => /* @__PURE__ */(0, import_jsx_runtime.jsxs)(motion.div, {
 						initial: {
 							opacity: 0,
 							y: 20
@@ -290,58 +333,19 @@ function Hero() {
 							y: 0
 						},
 						transition: {
-							duration: .7,
-							delay: .45
+							duration: .6,
+							delay: .5 + i * .1
 						},
-						className: "mt-8 flex flex-wrap justify-center gap-3",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
-							href: "#about",
-							className: "group inline-flex items-center gap-2 rounded-xl bg-[var(--gradient-neon)] px-6 py-3 text-sm font-semibold text-white shadow-neon transition hover:scale-105",
-							children: ["Explore More", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "h-4 w-4 transition group-hover:translate-x-1" })]
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
-							href: "#events",
-							className: "glass inline-flex items-center gap-2 rounded-xl px-6 py-3 text-sm font-semibold text-foreground transition hover:bg-white/10",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Calendar, { className: "h-4 w-4" }), "View Events"]
+						className: "glass rounded-2xl p-4 text-center",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "font-display text-3xl font-bold text-gradient sm:text-4xl",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Counter, { to: s.n }), "+"]
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							className: "mt-1 text-xs uppercase tracking-wider text-muted-foreground",
+							children: s.l
 						})]
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "mt-16 grid grid-cols-3 gap-3 sm:gap-6 w-full max-w-2xl mx-auto",
-						children: [
-							{
-								n: 6,
-								l: "Planned Events"
-							},
-							{
-								n: 7,
-								l: "Core Executives"
-							},
-							{
-								n: 12,
-								l: "Objectives"
-							}
-						].map((s, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.div, {
-							initial: {
-								opacity: 0,
-								y: 20
-							},
-							animate: {
-								opacity: 1,
-								y: 0
-							},
-							transition: {
-								duration: .6,
-								delay: .5 + i * .1
-							},
-							className: "glass rounded-2xl p-4 text-center",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "font-display text-3xl font-bold text-gradient sm:text-4xl",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Counter, { to: s.n }), "+"]
-							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-								className: "mt-1 text-xs uppercase tracking-wider text-muted-foreground",
-								children: s.l
-							})]
-						}, s.l))
-					})
+					}, s.l))
+				})
 				]
 			})
 		})
@@ -352,38 +356,38 @@ function SectionHeader({ eyebrow, title, description }) {
 		className: "mx-auto max-w-3xl text-center",
 		children: [
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.div, {
-				initial: {
-					opacity: 0,
-					y: 12
-				},
-				whileInView: {
-					opacity: 1,
-					y: 0
-				},
-				viewport: {
-					once: true,
-					margin: "-80px"
-				},
-				className: "glass-neon inline-flex items-center rounded-full px-4 py-1.5 text-xs font-medium uppercase tracking-widest text-[var(--neon-cyan)]",
-				children: eyebrow
-			}),
+			initial: {
+				opacity: 0,
+				y: 12
+			},
+			whileInView: {
+				opacity: 1,
+				y: 0
+			},
+			viewport: {
+				once: true,
+				margin: "-80px"
+			},
+			className: "glass-neon inline-flex items-center rounded-full px-4 py-1.5 text-xs font-medium uppercase tracking-widest text-[var(--neon-cyan)]",
+			children: eyebrow
+		}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.h2, {
-				initial: {
-					opacity: 0,
-					y: 20
-				},
-				whileInView: {
-					opacity: 1,
-					y: 0
-				},
-				viewport: {
-					once: true,
-					margin: "-80px"
-				},
-				transition: { delay: .05 },
-				className: "font-display mt-4 text-4xl font-black sm:text-5xl",
-				children: title
-			}),
+			initial: {
+				opacity: 0,
+				y: 20
+			},
+			whileInView: {
+				opacity: 1,
+				y: 0
+			},
+			viewport: {
+				once: true,
+				margin: "-80px"
+			},
+			transition: { delay: .05 },
+			className: "font-display mt-4 text-4xl font-black sm:text-5xl",
+			children: title
+		}),
 			description && /* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.p, {
 				initial: { opacity: 0 },
 				whileInView: { opacity: 1 },
@@ -439,30 +443,30 @@ function Card({ icon: Icon, title, desc, points }) {
 			className: "relative",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-					className: "grid h-12 w-12 place-items-center rounded-xl bg-[var(--gradient-neon)] text-white shadow-neon",
-					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Icon, { className: "h-6 w-6" })
-				}),
+				className: "grid h-12 w-12 place-items-center rounded-xl bg-[var(--gradient-neon)] text-white shadow-neon",
+				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Icon, { className: "h-6 w-6" })
+			}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-					className: "font-display mt-5 text-2xl font-bold",
-					children: title
-				}),
+				className: "font-display mt-5 text-2xl font-bold",
+				children: title
+			}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					className: "mt-3 text-muted-foreground",
-					children: desc
-				}),
+				className: "mt-3 text-muted-foreground",
+				children: desc
+			}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
-					className: "mt-6 space-y-3",
-					children: points.map((p) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-						className: "flex gap-3 text-sm",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							className: "mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-[var(--neon)]/15 text-[var(--neon-cyan)]",
-							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "h-3 w-3" })
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							className: "text-foreground/90",
-							children: p
-						})]
-					}, p))
-				})
+				className: "mt-6 space-y-3",
+				children: points.map((p) => /* @__PURE__ */(0, import_jsx_runtime.jsxs)("li", {
+					className: "flex gap-3 text-sm",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+						className: "mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-[var(--neon)]/15 text-[var(--neon-cyan)]",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "h-3 w-3" })
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+						className: "text-foreground/90",
+						children: p
+					})]
+				}, p))
+			})
 			]
 		})]
 	});
@@ -475,19 +479,23 @@ function About() {
 			className: "mx-auto max-w-7xl px-4",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SectionHeader, {
 				eyebrow: "Who We Are",
-				title: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: ["About ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-					className: "text-gradient",
-					children: "Robotics Club"
-				})] }),
+				title: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, {
+					children: ["About ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+						className: "text-gradient",
+						children: "Robotics Club"
+					})]
+				}),
 				description: "Transforming passionate students into skilled robotics engineers."
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "mt-14 grid gap-6 md:grid-cols-2",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FadeIn, { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Card, {
-					icon: Eye,
-					title: "Our Vision",
-					desc: "To transform the robotics club into a build-first engineering ecosystem where students consistently design, develop, and deploy intelligent systems that solve real-world problems.",
-					points: vision
-				}) }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(FadeIn, {
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FadeIn, {
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Card, {
+						icon: Eye,
+						title: "Our Vision",
+						desc: "To transform the robotics club into a build-first engineering ecosystem where students consistently design, develop, and deploy intelligent systems that solve real-world problems.",
+						points: vision
+					})
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(FadeIn, {
 					delay: .1,
 					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Card, {
 						icon: Target,
@@ -569,14 +577,16 @@ function Objectives() {
 			className: "mx-auto max-w-7xl px-4",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SectionHeader, {
 				eyebrow: "Roadmap",
-				title: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: ["12 ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-					className: "text-gradient",
-					children: "Objectives"
-				})] }),
+				title: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, {
+					children: ["12 ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+						className: "text-gradient",
+						children: "Objectives"
+					})]
+				}),
 				description: "A clear, executable framework for building the next generation of robotics engineers."
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 				className: "mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3",
-				children: items.map((it, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.div, {
+				children: items.map((it, i) => /* @__PURE__ */(0, import_jsx_runtime.jsx)(motion.div, {
 					initial: {
 						opacity: 0,
 						y: 24
@@ -681,10 +691,12 @@ function Events() {
 			className: "mx-auto max-w-7xl px-4",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SectionHeader, {
 				eyebrow: "Planned Activities",
-				title: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: ["Events & ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-					className: "text-gradient",
-					children: "Programs"
-				})] }),
+				title: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, {
+					children: ["Events & ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+						className: "text-gradient",
+						children: "Programs"
+					})]
+				}),
 				description: "Six flagship initiatives engineered to forge builders, not spectators."
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "relative mt-16 max-w-5xl mx-auto",
@@ -721,30 +733,30 @@ function Events() {
 										className: "relative",
 										children: [
 											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-												className: "flex items-center justify-between",
-												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-													className: "grid h-12 w-12 place-items-center rounded-xl bg-[var(--gradient-neon)] text-white shadow-neon",
-													children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(e.icon, { className: "h-5 w-5" })
-												}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-													className: "font-display text-[10px] uppercase tracking-widest text-[var(--neon-cyan)] glass-neon rounded-full px-3 py-1",
-													children: e.tag
-												})]
-											}),
+											className: "flex items-center justify-between",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												className: "grid h-12 w-12 place-items-center rounded-xl bg-[var(--gradient-neon)] text-white shadow-neon",
+												children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(e.icon, { className: "h-5 w-5" })
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												className: "font-display text-[10px] uppercase tracking-widest text-[var(--neon-cyan)] glass-neon rounded-full px-3 py-1",
+												children: e.tag
+											})]
+										}),
 											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-												className: "font-display mt-5 text-xl font-bold",
-												children: e.title
-											}),
+											className: "font-display mt-5 text-xl font-bold",
+											children: e.title
+										}),
 											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-												className: "mt-2 text-sm text-muted-foreground",
-												children: e.desc
-											}),
+											className: "mt-2 text-sm text-muted-foreground",
+											children: e.desc
+										}),
 											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
-												className: "mt-5 space-y-2",
-												children: e.bullets.map((b) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-													className: "flex gap-2 text-sm text-foreground/85",
-													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--neon-cyan)] shadow-neon" }), b]
-												}, b))
-											})
+											className: "mt-5 space-y-2",
+											children: e.bullets.map((b) => /* @__PURE__ */(0, import_jsx_runtime.jsxs)("li", {
+												className: "flex gap-2 text-sm text-foreground/85",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--neon-cyan)] shadow-neon" }), b]
+											}, b))
+										})
 										]
 									})]
 								})
@@ -881,45 +893,45 @@ function MemberCard({ m, i, large = false }) {
 				className: "flex flex-col items-center p-6 text-center",
 				children: [
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-						className: `font-display font-bold ${large ? "text-xl" : "text-lg"}`,
-						children: m.name
-					}),
+					className: `font-display font-bold ${large ? "text-xl" : "text-lg"}`,
+					children: m.name
+				}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "mt-2 inline-block rounded-full bg-violet-950/45 border border-violet-800/30 px-3 py-1 text-xs font-semibold text-violet-300",
-						children: m.role
-					}),
+					className: "mt-2 inline-block rounded-full bg-violet-950/45 border border-violet-800/30 px-3 py-1 text-xs font-semibold text-violet-300",
+					children: m.role
+				}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
-						href: `tel:${m.phone}`,
-						className: "mt-4 inline-flex items-center gap-2 text-xs text-muted-foreground hover:text-[var(--neon-cyan)] transition",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Phone, { className: "h-3.5 w-3.5 text-[var(--neon-cyan)]" }), m.phone]
-					}),
+					href: `tel:${m.phone}`,
+					className: "mt-4 inline-flex items-center gap-2 text-xs text-muted-foreground hover:text-[var(--neon-cyan)] transition",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Phone, { className: "h-3.5 w-3.5 text-[var(--neon-cyan)]" }), m.phone]
+				}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "mt-4 flex items-center justify-center gap-2",
-						children: [
-							m.linkedIn && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-								href: m.linkedIn,
-								target: "_blank",
-								rel: "noopener noreferrer",
-								className: "grid h-9 w-9 place-items-center rounded-lg glass text-muted-foreground transition hover:text-[var(--neon-cyan)] hover:shadow-neon",
-								"aria-label": "LinkedIn Profile",
-								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Linkedin, { className: "h-4 w-4" })
-							}),
-							m.github && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-								href: m.github,
-								target: "_blank",
-								rel: "noopener noreferrer",
-								className: "grid h-9 w-9 place-items-center rounded-lg glass text-muted-foreground transition hover:text-[var(--neon-cyan)] hover:shadow-neon",
-								"aria-label": "GitHub Profile",
-								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Github, { className: "h-4 w-4" })
-							}),
-							m.mail && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-								href: m.mail.startsWith("mailto:") ? m.mail : `mailto:${m.mail}`,
-								className: "grid h-9 w-9 place-items-center rounded-lg glass text-muted-foreground transition hover:text-[var(--neon-cyan)] hover:shadow-neon",
-								"aria-label": "Email Contact",
-								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Mail, { className: "h-4 w-4" })
-							})
-						]
-					})
+					className: "mt-4 flex items-center justify-center gap-2",
+					children: [
+						m.linkedIn && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+							href: m.linkedIn,
+							target: "_blank",
+							rel: "noopener noreferrer",
+							className: "grid h-9 w-9 place-items-center rounded-lg glass text-muted-foreground transition hover:text-[var(--neon-cyan)] hover:shadow-neon",
+							"aria-label": "LinkedIn Profile",
+							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Linkedin, { className: "h-4 w-4" })
+						}),
+						m.github && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+							href: m.github,
+							target: "_blank",
+							rel: "noopener noreferrer",
+							className: "grid h-9 w-9 place-items-center rounded-lg glass text-muted-foreground transition hover:text-[var(--neon-cyan)] hover:shadow-neon",
+							"aria-label": "GitHub Profile",
+							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Github, { className: "h-4 w-4" })
+						}),
+						m.mail && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+							href: m.mail.startsWith("mailto:") ? m.mail : `mailto:${m.mail}`,
+							className: "grid h-9 w-9 place-items-center rounded-lg glass text-muted-foreground transition hover:text-[var(--neon-cyan)] hover:shadow-neon",
+							"aria-label": "Email Contact",
+							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Mail, { className: "h-4 w-4" })
+						})
+					]
+				})
 				]
 			})]
 		})]
@@ -933,31 +945,33 @@ function Team() {
 			className: "mx-auto max-w-7xl px-4",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SectionHeader, {
-					eyebrow: "The Team",
-					title: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: ["Meet Our ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+				eyebrow: "The Team",
+				title: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, {
+					children: ["Meet Our ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 						className: "text-gradient",
 						children: "Executives"
-					})] }),
-					description: "Builders, organizers, and engineers driving the Robotics Club mission forward."
+					})]
 				}),
+				description: "Builders, organizers, and engineers driving the Robotics Club mission forward."
+			}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "mt-14 grid place-items-center",
-					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "w-full max-w-md",
-						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(MemberCard, {
-							m: advisor,
-							i: 0,
-							large: true
-						})
+				className: "mt-14 grid place-items-center",
+				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "w-full max-w-md",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(MemberCard, {
+						m: advisor,
+						i: 0,
+						large: true
 					})
-				}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4",
-					children: team.map((m, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(MemberCard, {
-						m,
-						i: i + 1
-					}, m.name))
 				})
+			}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+				className: "mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4",
+				children: team.map((m, i) => /* @__PURE__ */(0, import_jsx_runtime.jsx)(MemberCard, {
+					m,
+					i: i + 1
+				}, m.name))
+			})
 			]
 		})
 	});
@@ -1016,193 +1030,195 @@ function Contact() {
 			className: "mx-auto max-w-7xl px-4",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SectionHeader, {
-					eyebrow: "Get in Touch",
-					title: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: ["Contact ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+				eyebrow: "Get in Touch",
+				title: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, {
+					children: ["Contact ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 						className: "text-gradient",
 						children: "Robotics Club"
-					})] }),
-					description: "Reach our core team or send us a message — we build, we listen, we ship."
-				}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "mt-14 grid gap-6 lg:grid-cols-3",
-					children: contacts.map((c, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.div, {
-						initial: {
-							opacity: 0,
-							y: 24
-						},
-						whileInView: {
-							opacity: 1,
-							y: 0
-						},
-						viewport: {
-							once: true,
-							margin: "-50px"
-						},
-						transition: {
-							duration: .45,
-							delay: i * .08
-						},
-						className: "glass group rounded-2xl p-6 transition hover:-translate-y-1 hover:shadow-neon",
-						children: [
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-								className: "font-display text-xs uppercase tracking-widest text-[var(--neon-cyan)]",
-								children: c.role
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-								className: "mt-2 text-xl font-bold",
-								children: c.name
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
-								href: `tel:${c.phone}`,
-								className: "mt-4 inline-flex items-center gap-2 text-sm text-foreground/85 transition hover:text-[var(--neon-cyan)]",
-								children: [
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Phone, { className: "h-4 w-4" }),
-									" ",
-									c.phone
-								]
-							})
-						]
-					}, c.role))
-				}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "mt-12 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]",
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.form, {
-						initial: {
-							opacity: 0,
-							y: 24
-						},
-						whileInView: {
-							opacity: 1,
-							y: 0
-						},
-						viewport: { once: true },
-						onSubmit: handleSubmit,
-						className: "glass rounded-3xl p-7",
-						children: [
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-								className: "font-display text-2xl font-bold",
-								children: "Send a Message"
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								className: "mt-1 text-sm text-muted-foreground",
-								children: "We typically respond within 48 hours."
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "mt-6 grid gap-4",
-								children: [
-									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										className: "grid gap-1.5",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", {
-											className: "text-xs uppercase tracking-widest text-muted-foreground",
-											children: "Name"
-										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
-											required: true,
-											type: "text",
-											name: "name",
-											value: name,
-											onChange: (e) => setName(e.target.value),
-											className: "rounded-xl bg-[var(--input)] px-4 py-3 text-sm outline-none ring-1 ring-transparent transition focus:ring-[var(--neon)]",
-											placeholder: "Your full name"
-										})]
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										className: "grid gap-1.5",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", {
-											className: "text-xs uppercase tracking-widest text-muted-foreground",
-											children: "Email"
-										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
-											required: true,
-											type: "email",
-											name: "email",
-											value: email,
-											onChange: (e) => setEmail(e.target.value),
-											className: "rounded-xl bg-[var(--input)] px-4 py-3 text-sm outline-none ring-1 ring-transparent transition focus:ring-[var(--neon)]",
-											placeholder: "you@college.edu"
-										})]
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										className: "grid gap-1.5",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", {
-											className: "text-xs uppercase tracking-widest text-muted-foreground",
-											children: "Message"
-										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("textarea", {
-											required: true,
-											name: "message",
-											value: message,
-											onChange: (e) => setMessage(e.target.value),
-											rows: 5,
-											className: "rounded-xl bg-[var(--input)] px-4 py-3 text-sm outline-none ring-1 ring-transparent transition focus:ring-[var(--neon)]",
-											placeholder: "Tell us about your idea or question…"
-										})]
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
-										type: "submit",
-										disabled: loading,
-										className: "mt-2 inline-flex items-center justify-center gap-2 rounded-xl bg-[var(--gradient-neon)] px-5 py-3 text-sm font-semibold text-white shadow-neon transition hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Send, { className: "h-4 w-4" }), loading ? "Sending..." : sent ? "Message Sent ✓" : "Submit"]
-									})
-								]
-							})
-						]
-					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.div, {
-						initial: {
-							opacity: 0,
-							y: 24
-						},
-						whileInView: {
-							opacity: 1,
-							y: 0
-						},
-						viewport: { once: true },
-						className: "glass relative overflow-hidden rounded-3xl p-7",
-						children: [
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-								className: "font-display text-2xl font-bold",
-								children: "Visit the Lab"
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								className: "mt-1 text-sm text-muted-foreground",
-								children: "Robotics Club Headquarters — Engineering Block"
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
-								className: "mt-5 space-y-3 text-sm",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-									className: "flex items-center gap-3",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-										className: "grid h-9 w-9 place-items-center rounded-lg glass-neon text-[var(--neon-cyan)]",
-										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(MapPin, { className: "h-4 w-4" })
-									}), "363, Arcot Road, Puliyur 1st Main Rd, Subedar Colony, Kodambakkam, Chennai, Tamil Nadu 600024,India"]
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-									className: "flex items-center gap-3",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-										className: "grid h-9 w-9 place-items-center rounded-lg glass-neon text-[var(--neon-cyan)]",
-										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Mail, { className: "h-4 w-4" })
-									}), "hello@Robotics Club.in"]
-								})]
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
-								href: "https://maps.google.com/?q=Meenakshi+Sundararajan+Engineering+College",
-								target: "_blank",
-								rel: "noopener noreferrer",
-								className: "group/map mt-6 block aspect-video w-full overflow-hidden rounded-2xl border border-[var(--neon)]/20 relative",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-									src: "/map.png",
-									alt: "Google Maps location of Meenakshi Sundararajan Engineering College",
-									className: "h-full w-full object-cover transition duration-500 group-hover/map:scale-105"
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-									className: "absolute inset-0 bg-black/40 opacity-0 group-hover/map:opacity-100 transition-opacity flex items-center justify-center",
-									children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										className: "glass-neon rounded-2xl px-5 py-3 text-center transform translate-y-2 group-hover/map:translate-y-0 transition-transform duration-300",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(MapPin, { className: "mx-auto h-6 w-6 text-[var(--neon-cyan)]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-											className: "font-display mt-1 text-xs uppercase tracking-widest text-[var(--neon-cyan)]",
-											children: "Open in Maps"
-										})]
-									})
-								})]
-							})
-						]
 					})]
-				})
+				}),
+				description: "Reach our core team or send us a message — we build, we listen, we ship."
+			}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+				className: "mt-14 grid gap-6 lg:grid-cols-3",
+				children: contacts.map((c, i) => /* @__PURE__ */(0, import_jsx_runtime.jsxs)(motion.div, {
+					initial: {
+						opacity: 0,
+						y: 24
+					},
+					whileInView: {
+						opacity: 1,
+						y: 0
+					},
+					viewport: {
+						once: true,
+						margin: "-50px"
+					},
+					transition: {
+						duration: .45,
+						delay: i * .08
+					},
+					className: "glass group rounded-2xl p-6 transition hover:-translate-y-1 hover:shadow-neon",
+					children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+						className: "font-display text-xs uppercase tracking-widest text-[var(--neon-cyan)]",
+						children: c.role
+					}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+						className: "mt-2 text-xl font-bold",
+						children: c.name
+					}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
+						href: `tel:${c.phone}`,
+						className: "mt-4 inline-flex items-center gap-2 text-sm text-foreground/85 transition hover:text-[var(--neon-cyan)]",
+						children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Phone, { className: "h-4 w-4" }),
+							" ",
+							c.phone
+						]
+					})
+					]
+				}, c.role))
+			}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "mt-12 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.form, {
+					initial: {
+						opacity: 0,
+						y: 24
+					},
+					whileInView: {
+						opacity: 1,
+						y: 0
+					},
+					viewport: { once: true },
+					onSubmit: handleSubmit,
+					className: "glass rounded-3xl p-7",
+					children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+						className: "font-display text-2xl font-bold",
+						children: "Send a Message"
+					}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+						className: "mt-1 text-sm text-muted-foreground",
+						children: "We typically respond within 48 hours."
+					}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "mt-6 grid gap-4",
+						children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "grid gap-1.5",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", {
+								className: "text-xs uppercase tracking-widest text-muted-foreground",
+								children: "Name"
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+								required: true,
+								type: "text",
+								name: "name",
+								value: name,
+								onChange: (e) => setName(e.target.value),
+								className: "rounded-xl bg-[var(--input)] px-4 py-3 text-sm outline-none ring-1 ring-transparent transition focus:ring-[var(--neon)]",
+								placeholder: "Your full name"
+							})]
+						}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "grid gap-1.5",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", {
+								className: "text-xs uppercase tracking-widest text-muted-foreground",
+								children: "Email"
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+								required: true,
+								type: "email",
+								name: "email",
+								value: email,
+								onChange: (e) => setEmail(e.target.value),
+								className: "rounded-xl bg-[var(--input)] px-4 py-3 text-sm outline-none ring-1 ring-transparent transition focus:ring-[var(--neon)]",
+								placeholder: "you@college.edu"
+							})]
+						}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "grid gap-1.5",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", {
+								className: "text-xs uppercase tracking-widest text-muted-foreground",
+								children: "Message"
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("textarea", {
+								required: true,
+								name: "message",
+								value: message,
+								onChange: (e) => setMessage(e.target.value),
+								rows: 5,
+								className: "rounded-xl bg-[var(--input)] px-4 py-3 text-sm outline-none ring-1 ring-transparent transition focus:ring-[var(--neon)]",
+								placeholder: "Tell us about your idea or question…"
+							})]
+						}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+							type: "submit",
+							disabled: loading,
+							className: "mt-2 inline-flex items-center justify-center gap-2 rounded-xl bg-[var(--gradient-neon)] px-5 py-3 text-sm font-semibold text-white shadow-neon transition hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Send, { className: "h-4 w-4" }), loading ? "Sending..." : sent ? "Message Sent ✓" : "Submit"]
+						})
+						]
+					})
+					]
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.div, {
+					initial: {
+						opacity: 0,
+						y: 24
+					},
+					whileInView: {
+						opacity: 1,
+						y: 0
+					},
+					viewport: { once: true },
+					className: "glass relative overflow-hidden rounded-3xl p-7",
+					children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+						className: "font-display text-2xl font-bold",
+						children: "Visit the Lab"
+					}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+						className: "mt-1 text-sm text-muted-foreground",
+						children: "Robotics Club Headquarters — Engineering Block"
+					}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
+						className: "mt-5 space-y-3 text-sm",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+							className: "flex items-center gap-3",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								className: "grid h-9 w-9 place-items-center rounded-lg glass-neon text-[var(--neon-cyan)]",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(MapPin, { className: "h-4 w-4" })
+							}), "363, Arcot Road, Puliyur 1st Main Rd, Subedar Colony, Kodambakkam, Chennai, Tamil Nadu 600024,India"]
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+							className: "flex items-center gap-3",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								className: "grid h-9 w-9 place-items-center rounded-lg glass-neon text-[var(--neon-cyan)]",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Mail, { className: "h-4 w-4" })
+							}), "hello@Robotics Club.in"]
+						})]
+					}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
+						href: "https://maps.google.com/?q=Meenakshi+Sundararajan+Engineering+College",
+						target: "_blank",
+						rel: "noopener noreferrer",
+						className: "group/map mt-6 block aspect-video w-full overflow-hidden rounded-2xl border border-[var(--neon)]/20 relative",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+							src: "/map.png",
+							alt: "Google Maps location of Meenakshi Sundararajan Engineering College",
+							className: "h-full w-full object-cover transition duration-500 group-hover/map:scale-105"
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							className: "absolute inset-0 bg-black/40 opacity-0 group-hover/map:opacity-100 transition-opacity flex items-center justify-center",
+							children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "glass-neon rounded-2xl px-5 py-3 text-center transform translate-y-2 group-hover/map:translate-y-0 transition-transform duration-300",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(MapPin, { className: "mx-auto h-6 w-6 text-[var(--neon-cyan)]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "font-display mt-1 text-xs uppercase tracking-widest text-[var(--neon-cyan)]",
+									children: "Open in Maps"
+								})]
+							})
+						})]
+					})
+					]
+				})]
+			})
 			]
 		})
 	});
@@ -1237,43 +1253,50 @@ function Footer() {
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "grid gap-10 md:grid-cols-3",
 				children: [
-					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
-							href: "#home",
-							className: "flex items-center gap-2 group",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-								src: "/logo.jpg",
-								alt: "ROBOCLUB Logo",
-								className: "h-9 w-9 rounded-xl object-cover shadow-neon border border-[var(--neon)]/30 group-hover:scale-105 transition-transform"
-							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
-								className: "font-display text-lg font-bold tracking-widest",
-								children: ["ROBOTICS", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									className: "text-gradient",
-									children: "CLUB"
-								})]
+						href: "#home",
+						className: "flex items-center gap-2 group",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+							src: "/logo.png",
+							alt: "ROBOCLUB Logo",
+							className: "h-9 w-9 rounded-xl object-cover shadow-neon border border-[var(--neon)]/30 group-hover:scale-105 transition-transform"
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+							className: "font-display text-lg font-bold tracking-widest",
+							children: ["ROBOTICS", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								className: "text-gradient",
+								children: "CLUB"
 							})]
-						}),
+						})]
+					}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "mt-3 text-sm text-muted-foreground",
-							children: "Build. Innovate. Engineer."
-						}),
+						className: "mt-3 text-sm text-muted-foreground",
+						children: "Build. Innovate. Engineer."
+					}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "mt-2 max-w-xs text-xs text-muted-foreground/80",
-							children: "A build-first robotics ecosystem turning students into engineers who ship working systems."
-						})
-					] }),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
+						className: "mt-2 max-w-xs text-xs text-muted-foreground/80",
+						children: "A build-first robotics ecosystem turning students into engineers who ship working systems."
+					})
+					]
+				}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
 						className: "font-display text-xs uppercase tracking-widest text-[var(--neon-cyan)]",
 						children: "Quick Links"
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
 						className: "mt-4 grid grid-cols-2 gap-2 text-sm",
-						children: links.map((l) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-							href: l.href,
-							className: "text-muted-foreground transition hover:text-foreground",
-							children: l.label
-						}) }, l.href))
-					})] }),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
+						children: links.map((l) => /* @__PURE__ */(0, import_jsx_runtime.jsx)("li", {
+							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+								href: l.href,
+								className: "text-muted-foreground transition hover:text-foreground",
+								children: l.label
+							})
+						}, l.href))
+					})]
+				}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
 						className: "font-display text-xs uppercase tracking-widest text-[var(--neon-cyan)]",
 						children: "Follow"
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -1283,12 +1306,13 @@ function Footer() {
 							Linkedin,
 							Instagram,
 							Youtube
-						].map((Icon, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+						].map((Icon, i) => /* @__PURE__ */(0, import_jsx_runtime.jsx)("a", {
 							href: "#",
 							className: "grid h-10 w-10 place-items-center rounded-xl glass text-muted-foreground transition hover:text-[var(--neon-cyan)] hover:shadow-neon",
 							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Icon, { className: "h-4 w-4" })
 						}, i))
-					})] })
+					})]
+				})
 				]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "mt-10 flex flex-col items-center justify-between gap-3 border-t border-[var(--border)] pt-6 text-xs text-muted-foreground sm:flex-row",
@@ -1306,14 +1330,16 @@ function Index() {
 		children: [
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Background, {}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Nav, {}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("main", { children: [
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("main", {
+			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Hero, {}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(About, {}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Objectives, {}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Events, {}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Team, {}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Contact, {})
-			] }),
+			]
+		}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Footer, {})
 		]
 	});
