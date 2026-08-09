@@ -1,4 +1,4 @@
-import { Github, Linkedin, Instagram, Youtube } from "lucide-react";
+import { Github, Linkedin, Mail, Instagram } from "lucide-react";
 
 const links = [
   { href: "#home", label: "Home" },
@@ -6,6 +6,24 @@ const links = [
   { href: "#events", label: "Events" },
   { href: "#team", label: "Team" },
   { href: "#contact", label: "Contact" },
+];
+
+const socialLinks = [
+  {
+    icon: Linkedin,
+    href: "https://www.linkedin.com/in/monishwaran-k-b463a3363/",
+    label: "LinkedIn",
+  },
+  {
+    icon: Mail,
+    href: "mailto: roboticsdroneclub2k26@gmail.com",
+    label: "Email",
+  },
+  {
+    icon: Instagram,
+    href: "#",
+    label: "Instagram",
+  },
 ];
 
 export function Footer() {
@@ -16,12 +34,12 @@ export function Footer() {
           <div>
             <a href="#home" className="flex items-center gap-2 group">
               <img
-                src="/logo.jpg"
+                src="/logo.png"
                 alt="ROBOCLUB Logo"
-                className="h-9 w-9 rounded-xl object-cover shadow-neon border border-[var(--neon)]/30 group-hover:scale-105 transition-transform"
+                className="h-11 w-11 rounded-full object-cover shadow-neon border border-[var(--neon)]/30 group-hover:scale-105 transition-transform"
               />
-              <span className="font-display text-lg font-bold tracking-widest">
-                ROBOTICS<span className="text-gradient">CLUB</span>
+              <span className="font-display text-sm sm:text-base font-bold tracking-wider">
+                ROBOTICS <span className="text-gradient">& DRONES CLUB</span>
               </span>
             </a>
             <p className="mt-3 text-sm text-muted-foreground">
@@ -56,15 +74,21 @@ export function Footer() {
               Follow
             </h4>
             <div className="mt-4 flex gap-2">
-              {[Github, Linkedin, Instagram, Youtube].map((Icon, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  className="grid h-10 w-10 place-items-center rounded-xl glass text-muted-foreground transition hover:text-[var(--neon-cyan)] hover:shadow-neon"
-                >
-                  <Icon className="h-4 w-4" />
-                </a>
-              ))}
+              {socialLinks.map((item, i) => {
+                const Icon = item.icon;
+                return (
+                  <a
+                    key={i}
+                    href={item.href}
+                    target={item.href.startsWith("http") ? "_blank" : undefined}
+                    rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                    aria-label={item.label}
+                    className="grid h-10 w-10 place-items-center rounded-xl glass text-muted-foreground transition hover:text-[var(--neon-cyan)] hover:shadow-neon"
+                  >
+                    <Icon className="h-4 w-4" />
+                  </a>
+                );
+              })}
             </div>
           </div>
         </div>

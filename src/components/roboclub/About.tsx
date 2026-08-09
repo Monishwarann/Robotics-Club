@@ -55,7 +55,7 @@ export function About() {
       <div className="mx-auto max-w-7xl px-4">
         <SectionHeader
           eyebrow="Who We Are"
-          title={<>About <span className="text-gradient">Robotics Club</span></>}
+          title={<>About <span className="text-gradient">Robotics & Drones Club</span></>}
           description="Transforming passionate students into skilled robotics engineers."
         />
         <div className="mt-14 grid gap-6 md:grid-cols-2">

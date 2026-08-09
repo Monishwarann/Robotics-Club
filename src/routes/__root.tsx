@@ -78,11 +78,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Robotics Club — Build. Innovate. Engineer." },
-      { name: "description", content: "Robotics Club is a build-first engineering ecosystem where students design, develop, and deploy intelligent robotics systems." },
-      { name: "author", content: "Robotics Club" },
-      { property: "og:title", content: "Robotics Club — Build. Innovate. Engineer." },
-      { property: "og:description", content: "Robotics Club is a build-first engineering ecosystem where students design, develop, and deploy intelligent robotics systems." },
+      { title: "Robotics & Drones Club - Build. Innovate. Engineer." },
+      { name: "description", content: "Robotics & Drones Club is a build-first engineering ecosystem where students design, develop, and deploy intelligent robotics systems." },
+      { name: "author", content: "Robotics & Drones Club" },
+      { property: "og:title", content: "Robotics & Drones Club - Build. Innovate. Engineer." },
+      { property: "og:description", content: "Robotics & Drones Club is a build-first engineering ecosystem where students design, develop, and deploy intelligent robotics systems." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
@@ -92,7 +92,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/4dfb0f0a-5b60-43f3-909b-d346625ed4e9/id-preview-4f2ff722--5d76bdfe-6cd5-4b36-9b3e-b90691f64aca.lovable.app-1782411258601.png" },
     ],
     links: [
-      { rel: "icon", href: "/logo.jpg", type: "image/jpeg" },
+      { rel: "icon", href: "/logo.png", type: "image/png", sizes: "32x32" },
+      { rel: "apple-touch-icon", href: "/logo.png" },
       {
         rel: "stylesheet",
         href: appCss,

@@ -21,11 +21,9 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="font-display mt-6 text-5xl font-black leading-[0.95] sm:text-7xl lg:text-8xl"
+            className="font-display mt-6 text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight whitespace-nowrap"
           >
-            ROBOTICS
-            <br />
-            <span className="text-gradient">CLUB</span>
+            ROBOTICS <span className="text-gradient">& DRONES CLUB</span>
           </motion.h1>
 
           <motion.p

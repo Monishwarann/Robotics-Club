@@ -12,13 +12,13 @@ import { Footer } from "@/components/roboclub/Footer";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Robotics Club — Build. Innovate. Engineer." },
+      { title: "Robotics & Drones Club - Build. Innovate. Engineer." },
       {
         name: "description",
         content:
-          "Robotics Club is a build-first college robotics ecosystem — events, executives, objectives, and projects that ship.",
+          "Robotics & Drones Club is a build-first college robotics ecosystem — events, executives, objectives, and projects that ship.",
       },
-      { property: "og:title", content: "Robotics Club — Engineering the Future" },
+      { property: "og:title", content: "Robotics & Drones Club - Engineering the Future" },
       {
         property: "og:description",
         content: "A build-first robotics ecosystem. Build. Innovate. Engineer.",
