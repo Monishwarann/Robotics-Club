@@ -43,7 +43,7 @@ const team: Member[] = [
     role: "President",
     meta: "EEE — III Year",
     phone: "9342710667",
-    image:"/vignesh.jpg",
+    image:"/president.jpeg",
     linkedIn: "",
     mail: "",
     github: ""
