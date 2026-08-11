@@ -11,7 +11,7 @@ export function SectionHeader({
   description?: string;
 }) {
   return (
-    <div className="mx-auto max-w-3xl text-center">
+    <div className="mx-auto max-w-5xl text-center">
       <motion.div
         initial={{ opacity: 0, y: 12 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -25,7 +25,7 @@ export function SectionHeader({
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
         transition={{ delay: 0.05 }}
-        className="font-display mt-4 text-4xl font-black sm:text-5xl"
+        className="font-display mt-4 text-2xl sm:text-4xl md:text-5xl font-black tracking-wide sm:whitespace-nowrap max-w-full overflow-hidden text-ellipsis"
       >
         {title}
       </motion.h2>
