@@ -69,7 +69,7 @@ export function Contact() {
       <div className="mx-auto max-w-7xl px-4 relative z-10">
         <SectionHeader
           eyebrow="Get in Touch"
-          title={<>Contact <span className="text-gradient">Robotics Club</span></>}
+          title={<>Contact <span className="text-[var(--neon-cyan)] drop-shadow-[0_0_20px_rgba(0,229,255,0.6)]">Robotics & Drones Club</span></>}
           description="Reach our core team or send us a message — we build, we listen, we ship."
         />
 
