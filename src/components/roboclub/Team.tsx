@@ -46,14 +46,14 @@ const executiveBoard: Member[] = [
     image: "/president.jpeg",
   },
   {
-    name: "Santhosh Kumar M",
+    name: "SANTHOSH KUMAR M",
     role: "Vice President",
     meta: "MECH — III Year",
     phone: "7305422329",
     image: "/santhosh.jpg",
   },
   {
-    name: "Monishwaran K",
+    name: "MONISHWARAN K",
     role: "Secretary",
     meta: "MECH — III Year",
     phone: "7358996358",
@@ -63,11 +63,11 @@ const executiveBoard: Member[] = [
     name: "SAI BALAJI BS",
     role: "Joint Secretary",
     meta: "EEE — III Year",
-    phone: "81481 86421",
+    phone: "93818 02034",
     image: "/sai 1.png",
   },
   {
-    name: "Jashwin S",
+    name: "JASHWIN S",
     role: "Treasurer",
     meta: "MECH — III Year",
     phone: "6380705052",
@@ -77,27 +77,27 @@ const executiveBoard: Member[] = [
     name: "KIRTI R",
     role: "Joint Treasurer",
     meta: "EEE — III Year",
-    phone: "93818 02034",
+    phone: "81481 86421",
     image: "/Joint-Treasurer.jpeg",
   },
 ];
 
 const executiveMembers: Member[] = [
     {
-    name: "Jai Ashwin R M",
+    name: "JAI ASHWIN R M",
     role: "Executive Member",
     meta: "MECH — II Year",
     image: "/Executive member/jaiashwin.png",
     imagePosition: "object-top",
   },
    {
-    name: "Mohan Kumar",
+    name: "MOHAN KUMAR B",
     role: "Executive Member",
     meta: "MECH — II Year",
     image: "/Executive member/mohan.png",
     imagePosition: "object-top",
   },  {
-    name: "Akshayan S",
+    name: "AKSHAYAN S",
     role: "Executive Member",
     meta: "MECH — II Year",
     image: "/Executive member/image.png",
@@ -105,21 +105,21 @@ const executiveMembers: Member[] = [
 
   },
   {
-    name: "Sabarine S",
+    name: "SABARINE S",
     role: "Executive Member",
     meta: "EEE — III Year",
     image: "/Executive member/Sabarine S.png",
     imagePosition: "object-top",
   },
   {
-    name: "Girish Kumar",
+    name: "GIRISH KUMAR",
     role: "Executive Member",
     meta: "EEE — II Year",
     image: "/Executive member/girish kumar.png",
     imagePosition: "object-top",
   },
   {
-    name: "Varsha Shree P",
+    name: "VARSHA SHREE P",
     role: "Executive Member",
     meta: "EEE — II Year",
     image: "/Executive member/varsha shree P.png",
