@@ -4,6 +4,7 @@ import {
   Trophy, Cpu, GraduationCap, Zap, BarChart3, BookOpen,
 } from "lucide-react";
 import { SectionHeader } from "./Section";
+import { Card3D } from "./Card3D";
 
 const items = [
   { icon: GitBranch, t: "Learning Pipeline", d: "Implement a structured learning-to-building pipeline with mandatory deliverables at each level." },
@@ -22,38 +23,39 @@ const items = [
 
 export function Objectives() {
   return (
-    <section className="relative py-24">
-      <div className="mx-auto max-w-7xl px-4">
+    <section className="relative py-24 overflow-hidden">
+      <div className="mx-auto max-w-7xl px-4 relative z-10">
         <SectionHeader
           eyebrow="Roadmap"
           title={<>12 <span className="text-gradient">Objectives</span></>}
           description="A clear, executable framework for building the next generation of robotics engineers."
         />
-        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((it, i) => (
-            <motion.div
-              key={it.t}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.45, delay: (i % 3) * 0.08 }}
-              className="glass group relative overflow-hidden rounded-2xl p-6 transition hover:-translate-y-1 hover:shadow-neon"
-            >
-              <div className="flex items-start gap-4">
-                <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl glass-neon text-[var(--neon-cyan)] transition group-hover:bg-[var(--gradient-neon)] group-hover:text-white">
-                  <it.icon className="h-5 w-5" />
-                </span>
-                <div className="min-w-0">
-                  <div className="flex items-center gap-2">
-                    <span className="font-display text-xs text-[var(--neon-cyan)]">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                    <h3 className="font-semibold">{it.t}</h3>
+            <Card3D key={it.t} intensity={12}>
+              <motion.div
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.45, delay: (i % 3) * 0.08 }}
+                className="glass group relative overflow-hidden rounded-2xl p-6 transition duration-500 border border-white/10 hover:border-[var(--neon-cyan)]/50 hover:shadow-neon h-full"
+              >
+                <div className="flex items-start gap-4">
+                  <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl glass-neon text-[var(--neon-cyan)] transition group-hover:bg-[var(--gradient-neon)] group-hover:text-white transform group-hover:scale-110">
+                    <it.icon className="h-5 w-5" />
+                  </span>
+                  <div className="min-w-0">
+                    <div className="flex items-center gap-2">
+                      <span className="font-display text-xs text-[var(--neon-cyan)] font-bold">
+                        {String(i + 1).padStart(2, "0")}
+                      </span>
+                      <h3 className="font-semibold text-white">{it.t}</h3>
+                    </div>
+                    <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{it.d}</p>
                   </div>
-                  <p className="mt-2 text-sm text-muted-foreground">{it.d}</p>
                 </div>
-              </div>
-            </motion.div>
+              </motion.div>
+            </Card3D>
           ))}
         </div>
       </div>

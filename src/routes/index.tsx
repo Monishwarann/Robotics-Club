@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Background } from "@/components/roboclub/Background";
+import { Background3D } from "@/components/roboclub/Background3D";
+import { Cursor3D } from "@/components/roboclub/Cursor3D";
 import { Nav } from "@/components/roboclub/Nav";
 import { Hero } from "@/components/roboclub/Hero";
 import { About } from "@/components/roboclub/About";
@@ -12,16 +13,16 @@ import { Footer } from "@/components/roboclub/Footer";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Robotics & Drones Club - Build. Innovate. Engineer." },
+      { title: "Robotics & Drones Club - 3D Cyber Ecosystem" },
       {
         name: "description",
         content:
-          "Robotics & Drones Club is a build-first college robotics ecosystem — events, executives, objectives, and projects that ship.",
+          "Robotics & Drones Club is a build-first college robotics ecosystem — 3D interactive experience, events, executive members, objectives, and projects that ship.",
       },
       { property: "og:title", content: "Robotics & Drones Club - Engineering the Future" },
       {
         property: "og:description",
-        content: "A build-first robotics ecosystem. Build. Innovate. Engineer.",
+        content: "A build-first 3D robotics ecosystem. Build. Innovate. Engineer.",
       },
     ],
   }),
@@ -30,10 +31,11 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <div className="relative min-h-screen text-foreground">
-      <Background />
+    <div className="relative min-h-screen text-foreground bg-[#070913]">
+      <Background3D />
+      <Cursor3D />
       <Nav />
-      <main>
+      <main className="relative z-10">
         <Hero />
         <About />
         <Objectives />
