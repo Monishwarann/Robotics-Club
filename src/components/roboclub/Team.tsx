@@ -25,15 +25,13 @@ const facultyAdvisors: Member[] = [
     meta: "Faculty Advisor",
     phone: "9600137609",
     image: "/incharge1.png",
-    badgeTitle: "Faculty Lead",
   },
   {
     name: "DR. R. MAHALAKSHMI",
     role: "Faculty Advisor & Club Mentor",
     meta: "Faculty Mentor",
     phone: "8015761669",
-    image: "/incharge2.png",
-    badgeTitle: "Faculty Lead",
+    image: "/incharge2.jpeg",
   },
 ];
 
@@ -71,7 +69,7 @@ const executiveBoard: Member[] = [
     role: "Treasurer",
     meta: "MECH — III Year",
     phone: "6380705052",
-    image: "/jaswin.png",
+    image: "/jaswin.jpeg",
   },
   {
     name: "KIRTI R",
