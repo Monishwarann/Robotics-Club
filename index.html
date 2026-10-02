@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ROBOTICS & DRONES CLUB — MSEC. Autonomous drones, intelligent robotics, and real-world embedded systems.">
+    <title>ROBOTICS & DRONES CLUB — MSEC</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600;700;800&family=Space+Grotesk:wght@500;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Primary Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+<body>
+
+    <!-- Background Canvas & Technical Grid Effects -->
+    <canvas id="bg-canvas"></canvas>
+    <div class="bg-grid"></div>
+    <div class="bg-glow-1"></div>
+    <div class="bg-glow-2"></div>
+
+    <!-- Fixed Floating Glass Navigation Bar -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#hero" class="nav-brand" aria-label="Robotics and Drones Club MSEC Home">
+                <img src="assets/logo.png" alt="R&D Club Logo" class="nav-logo" loading="eager">
+                <div class="nav-title-group">
+                    <span class="nav-title">ROBOTICS & DRONES CLUB</span>
+                    <span class="nav-subtitle">MSEC</span>
+                </div>
+            </a>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#hero" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#objectives" class="nav-link">Objectives</a></li>
+                    <li><a href="#events" class="nav-link">Events</a></li>
+                    <li><a href="#executives" class="nav-link">Team</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-cta">
+                <a href="#contact" class="btn btn-primary">
+                    JOIN THE CLUB
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+
+            <button class="mobile-toggle" aria-label="Toggle Navigation Menu">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content reveal">
+                    <div class="section-tag">MSEC • ROBOTICS & DRONES CLUB</div>
+                    <h1 class="hero-title">BUILD. FLY. <br><span class="gradient-text">AUTOMATE.</span></h1>
+                    <p class="hero-description">
+                        We design, build and deploy intelligent robotics, autonomous systems and next-generation drone technology through an authentic, build-first engineering culture.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#about" class="btn btn-primary">
+                            EXPLORE THE CLUB
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">JOIN THE CLUB</a>
+                    </div>
+                </div>
+
+                <!-- Futuristic Technical HUD Command Frame Visual -->
+                <div class="hero-visual reveal">
+                    <div class="hud-container hud-brackets">
+                        <div class="hud-ring-outer"></div>
+                        <div class="hud-ring-inner"></div>
+                        <div class="hud-grid-bg">
+                            <img src="assets/logo.png" alt="Robotics & Drones Club Official Logo" class="hud-center-logo">
+                        </div>
+                        <div class="hud-telemetry">
+                            <span class="telemetry-dot"></span>
+                            <span>SYS.R-D.V2.6 // AUTONOMOUS_FLIGHT_READY</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Statistics Banner -->
+            <div class="stats-banner reveal">
+                <div class="stats-grid hud-brackets">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="12+">0+</div>
+                        <div class="stat-label">OBJECTIVES</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="12">0</div>
+                        <div class="stat-label">FLAGSHIP PROGRAMS</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="6+">0+</div>
+                        <div class="stat-label">CORE EXECUTIVES</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="100%">0%</div>
+                        <div class="stat-label">BUILD-FIRST</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Status Bar -->
+    <div class="tech-status-bar">
+        <div class="tech-status-content">
+            <div class="status-indicator">
+                <span class="status-pulse-dot"></span>
+                <span>SYSTEM ONLINE</span>
+            </div>
+            <span class="status-divider">/</span>
+            <span>ROBOTICS</span>
+            <span class="status-divider">/</span>
+            <span>DRONE TECHNOLOGY</span>
+            <span class="status-divider">/</span>
+            <span>AUTONOMOUS AVIONICS</span>
+            <span class="status-divider">/</span>
+            <span>EMBEDDED SYSTEMS</span>
+            <span class="status-divider">/</span>
+            <span>AI COMPUTER VISION</span>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-tag">WHO WE ARE</div>
+            <h2 class="section-title">ENGINEERING WHAT'S NEXT.</h2>
+            
+            <div class="about-grid">
+                <div class="about-text-card glass-panel hud-brackets reveal">
+                    <h3 class="about-headline">Transforming passionate students into industry-ready robotics engineers.</h3>
+                    <p class="about-p">
+                        The Robotics & Drones Club at Meenakshi Sundararajan Engineering College (MSEC) is an interdisciplinary build-first engineering organization. We empower students to bridge theoretical concepts with functional physical systems.
+                    </p>
+                    <p class="about-p">
+                        From embedded microcontroller programming and CAD mechanical design to autonomous quadcopter flight control and AI computer vision algorithms, our members build real engineering prototypes every single semester.
+                    </p>
+
+                    <div class="domains-tags">
+                        <span class="domain-tag">Robotics</span>
+                        <span class="domain-tag">Drone Technology</span>
+                        <span class="domain-tag">Embedded Systems</span>
+                        <span class="domain-tag">Autonomous Systems</span>
+                        <span class="domain-tag">AI & Vision</span>
+                        <span class="domain-tag">Mechanical Engineering</span>
+                        <span class="domain-tag">Electronics</span>
+                        <span class="domain-tag">Programming</span>
+                        <span class="domain-tag">Real-World Prototyping</span>
+                    </div>
+                </div>
+
+                <div class="about-tech-card glass-panel hud-brackets reveal">
+                    <div class="tech-spec-item">
+                        <div class="tech-spec-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                        </div>
+                        <div class="tech-spec-info">
+                            <h4>Hardware & Firmware Labs</h4>
+                            <p>Hands-on work with ESP32, STM32, Arduino, Raspberry Pi, and custom PCB designs.</p>
+                        </div>
+                    </div>
+
+                    <div class="tech-spec-item">
+                        <div class="tech-spec-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        </div>
+                        <div class="tech-spec-info">
+                            <h4>Autonomous UAV Avionics</h4>
+                            <p>Sensor fusion, flight controller tuning, GPS waypoint navigation, and FPV setups.</p>
+                        </div>
+                    </div>
+
+                    <div class="tech-spec-item">
+                        <div class="tech-spec-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                        </div>
+                        <div class="tech-spec-info">
+                            <h4>AI & Computer Vision Integration</h4>
+                            <p>Real-time target tracking, OpenCV object detection, and edge AI inferencing.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision & Mission Section -->
+    <section id="vision-mission">
+        <div class="container">
+            <div class="section-tag">CORE STRATEGY</div>
+            <h2 class="section-title">VISION & MISSION</h2>
+
+            <div class="vision-mission-grid">
+                <!-- 01 VISION -->
+                <div class="vision-panel glass-panel hud-brackets reveal">
+                    <div class="panel-header-row">
+                        <span class="panel-num">01</span>
+                        <span class="panel-title">VISION</span>
+                    </div>
+                    <blockquote class="vision-quote">
+                        "To transform the robotics club into a build-first engineering ecosystem where students consistently design, develop and deploy intelligent systems that solve real-world problems."
+                    </blockquote>
+
+                    <div class="pipeline-flow">
+                        <div class="pipeline-step">DESIGN</div>
+                        <span class="pipeline-arrow">→</span>
+                        <div class="pipeline-step">BUILD</div>
+                        <span class="pipeline-arrow">→</span>
+                        <div class="pipeline-step">TEST</div>
+                        <span class="pipeline-arrow">→</span>
+                        <div class="pipeline-step">DEPLOY</div>
+                    </div>
+                </div>
+
+                <!-- 02 MISSION -->
+                <div class="mission-panel glass-panel hud-brackets reveal">
+                    <div class="panel-header-row">
+                        <span class="panel-num">02</span>
+                        <span class="panel-title">MISSION</span>
+                    </div>
+
+                    <div class="mission-list">
+                        <div class="mission-item-row">
+                            <span class="mission-bullet"></span>
+                            <div class="mission-item-text">
+                                <h4>Build-First Culture</h4>
+                                <p>Prioritizing functional hardware prototypes and tangible software implementations over abstract theory.</p>
+                            </div>
+                        </div>
+
+                        <div class="mission-item-row">
+                            <span class="mission-bullet"></span>
+                            <div class="mission-item-text">
+                                <h4>Structured Progression</h4>
+                                <p>Clear learning roadmaps guiding members from circuit fundamentals to advanced ROS 2 & UAV flight controllers.</p>
+                            </div>
+                        </div>
+
+                        <div class="mission-item-row">
+                            <span class="mission-bullet"></span>
+                            <div class="mission-item-text">
+                                <h4>Real-World Prototyping</h4>
+                                <p>Building functional machines that address actual industrial challenges, agricultural automation, and robotics telemetry.</p>
+                            </div>
+                        </div>
+
+                        <div class="mission-item-row">
+                            <span class="mission-bullet"></span>
+                            <div class="mission-item-text">
+                                <h4>Team Hardware Development</h4>
+                                <p>Fostering collaborative cross-disciplinary teamwork across Mechanical, Electrical, Computer Science, and Electronics engineering.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12 Objectives Section -->
+    <section id="objectives" class="objectives">
+        <div class="container">
+            <div class="section-tag">FRAMEWORK</div>
+            <h2 class="section-title">12 OBJECTIVES</h2>
+            <p class="section-subtitle">A clear framework for building the next generation of robotics engineers.</p>
+
+            <div class="objectives-grid">
+                <!-- 01 -->
+                <div class="objective-card glass-panel hud-brackets reveal">
+                    <div class="obj-header">
+                        <span class="obj-number">01</span>
+                        <div class="obj-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+                    </div>
+                    <h3 class="obj-title">Learning Pipeline</h3>
+                    <p class="obj-desc">Structured training paths spanning basic electronics, embedded C++, CAD modeling, and autonomous UAV software.</p>
+                </div>
+
+                <!-- 02 -->
+                <div class="objective-card glass-panel hud-brackets reveal">
+                    <div class="obj-header">
+                        <span class="obj-number">02</span>
+                        <div class="obj-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg></div>
+                    </div>
+                    <h3 class="obj-title">Build Every Semester</h3>
+                    <p class="obj-desc">Mandatory hands-on project execution every academic semester to guarantee continuous practical hardware skill development.</p>
+                </div>
+
+                <!-- 03 -->
+                <div class="objective-card glass-panel hud-brackets reveal">
+                    <div class="obj-header">
+                        <span class="obj-number">03</span>
+                        <div class="obj-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+                    </div>
+                    <h3 class="obj-title">Project Team System</h3>
+                    <p class="obj-desc">Interdisciplinary team formation combining Mechanical, Electrical, and Computer Science talents into cohesive hardware units.</p>
+                </div>
+
+                <!-- 04 -->
+                <div class="objective-card glass-panel hud-brackets reveal">
+                    <div class="obj-header">
+                        <span class="obj-number">04</span>
+                        <div class="obj-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+                    </div>
+                    <h3 class="obj-title">Problem Solving</h3>
+                    <p class="obj-desc">Tackling authentic industrial, agricultural, and urban challenges with robust, field-testable engineering solutions.</p>
+                </div>
+
+                <!-- 05 -->
+                <div class="objective-card glass-panel hud-brackets reveal">
+                    <div class="obj-header">
+                        <span class="obj-number">05</span>
+                        <div class="obj-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg></div>
+                    </div>
+                    <h3 class="obj-title">Documentation & Git</h3>
+                    <p class="obj-desc">Adopting enterprise-grade open-source code repositories, version control workflows, and comprehensive technical schematics.</p>
+                </div>
+
+                <!-- 06 -->
+                <div class="objective-card glass-panel hud-brackets reveal">
+                    <div class="obj-header">
+                        <span class="obj-number">06</span>
+                        <div class="obj-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+                    </div>
+                    <h3 class="obj-title">Design Reviews</h3>
+                    <p class="obj-desc">Rigorous peer-to-peer and mentor design evaluations before physical fabrication to minimize component wastage and errors.</p>
+                </div>
+
+                <!-- 07 -->
+                <div class="objective-card glass-panel hud-brackets reveal">
+                    <div class="obj-header">
+                        <span class="obj-number">07</span>
+                        <div class="obj-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg></div>
+                    </div>
+                    <h3 class="obj-title">Competitions</h3>
+                    <p class="obj-desc">Active representation and victory in national robotics hackathons, drone racing championships, and aerospace expos.</p>
+                </div>
+
+                <!-- 08 -->
+                <div class="objective-card glass-panel hud-brackets reveal">
+                    <div class="obj-header">
+                        <span class="obj-number">08</span>
+                        <div class="obj-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+                    </div>
+                    <h3 class="obj-title">Advanced Tools</h3>
+                    <p class="obj-desc">Mastery of modern software suites including SolidWorks, Fusion 360, ROS 2, Gazebo simulation, and EasyEDA PCB suites.</p>
+                </div>
+
+                <!-- 09 -->
+                <div class="objective-card glass-panel hud-brackets reveal">
+                    <div class="obj-header">
+                        <span class="obj-number">09</span>
+                        <div class="obj-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                    </div>
+                    <h3 class="obj-title">Peer Mentorship</h3>
+                    <p class="obj-desc">Senior student leaders actively guiding junior engineers through practical debugging, soldering, and firmware troubleshooting.</p>
+                </div>
+
+                <!-- 10 -->
+                <div class="objective-card glass-panel hud-brackets reveal">
+                    <div class="obj-header">
+                        <span class="obj-number">10</span>
+                        <div class="obj-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+                    </div>
+                    <h3 class="obj-title">Build Sprints</h3>
+                    <p class="obj-desc">High-intensity 48-hour hardware hackathons designed to prototype functional mechanisms under rapid time constraints.</p>
+                </div>
+
+                <!-- 11 -->
+                <div class="objective-card glass-panel hud-brackets reveal">
+                    <div class="obj-header">
+                        <span class="obj-number">11</span>
+                        <div class="obj-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+                    </div>
+                    <h3 class="obj-title">Performance Metrics</h3>
+                    <p class="obj-desc">Tracking hardware flight efficiency, sensor telemetry precision, code execution latency, and overall project completion rates.</p>
+                </div>
+
+                <!-- 12 -->
+                <div class="objective-card glass-panel hud-brackets reveal">
+                    <div class="obj-header">
+                        <span class="obj-number">12</span>
+                        <div class="obj-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+                    </div>
+                    <h3 class="obj-title">Knowledge Ecosystem</h3>
+                    <p class="obj-desc">Building a permanent digital knowledge repository of CAD models, component datasheets, research papers, and code snippets.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="events">
+        <div class="container">
+            <div class="section-tag">INNOVATION & ACTION</div>
+            <h2 class="section-title">EVENTS & PROGRAMS</h2>
+            <p class="section-subtitle">Discover our flagship engineering competitions, bootcamps, workshops, and challenges.</p>
+
+            <!-- Category Filters -->
+            <div class="events-filters">
+                <button class="filter-btn active" data-filter="ALL">ALL</button>
+                <button class="filter-btn" data-filter="COMPETITION">COMPETITION</button>
+                <button class="filter-btn" data-filter="BOOTCAMP">BOOTCAMP</button>
+                <button class="filter-btn" data-filter="WORKSHOP">WORKSHOP</button>
+                <button class="filter-btn" data-filter="CHALLENGE">CHALLENGE</button>
+                <button class="filter-btn" data-filter="TALK">TALK</button>
+                <button class="filter-btn" data-filter="COMMUNITY">COMMUNITY</button>
+                <button class="filter-btn" data-filter="DESIGN">DESIGN</button>
+                <button class="filter-btn" data-filter="E-SPORTS">E-SPORTS</button>
+            </div>
+
+            <div class="events-grid">
+                <!-- Event 01 -->
+                <div class="event-card glass-panel hud-brackets reveal" data-category="COMPETITION">
+                    <div class="event-image-wrap">
+                        <img src="assets/events/1.webp" alt="ROBOTVERSE BOT RACE Poster" class="event-image" loading="lazy">
+                        <span class="event-category-badge">COMPETITION</span>
+                    </div>
+                    <div class="event-body">
+                        <h3 class="event-title">ROBOTVERSE BOT RACE</h3>
+                        <div class="event-tagline">BUILD · PROGRAM · COMPETE</div>
+                        <div class="event-footer-link">
+                            <span>View Program Details</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 02 -->
+                <div class="event-card glass-panel hud-brackets reveal" data-category="BOOTCAMP">
+                    <div class="event-image-wrap">
+                        <img src="assets/events/2.webp" alt="SKYCRAFT DRONE BOOTCAMP Poster" class="event-image" loading="lazy">
+                        <span class="event-category-badge">BOOTCAMP</span>
+                    </div>
+                    <div class="event-body">
+                        <h3 class="event-title">SKYCRAFT DRONE BOOTCAMP</h3>
+                        <div class="event-tagline">LEARN · BUILD · FLY</div>
+                        <div class="event-footer-link">
+                            <span>View Program Details</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 03 -->
+                <div class="event-card glass-panel hud-brackets reveal" data-category="CHALLENGE">
+                    <div class="event-image-wrap">
+                        <img src="assets/events/3.webp" alt="TREASURE HUNT Poster" class="event-image" loading="lazy">
+                        <span class="event-category-badge">CHALLENGE</span>
+                    </div>
+                    <div class="event-body">
+                        <h3 class="event-title">TREASURE HUNT</h3>
+                        <div class="event-tagline">SOLVE · SEARCH · DISCOVER</div>
+                        <div class="event-footer-link">
+                            <span>View Program Details</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 04 -->
+                <div class="event-card glass-panel hud-brackets reveal" data-category="COMPETITION">
+                    <div class="event-image-wrap">
+                        <img src="assets/events/4.webp" alt="NEXUS INNOVATION PITCH EVENT Poster" class="event-image" loading="lazy">
+                        <span class="event-category-badge">COMPETITION</span>
+                    </div>
+                    <div class="event-body">
+                        <h3 class="event-title">NEXUS: INNOVATION PITCH EVENT</h3>
+                        <div class="event-tagline">IMAGINE · PITCH · DEPLOY</div>
+                        <div class="event-footer-link">
+                            <span>View Program Details</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 05 -->
+                <div class="event-card glass-panel hud-brackets reveal" data-category="WORKSHOP">
+                    <div class="event-image-wrap">
+                        <img src="assets/events/5.webp" alt="ROBOTIC WORKSHOP Poster" class="event-image" loading="lazy">
+                        <span class="event-category-badge">WORKSHOP</span>
+                    </div>
+                    <div class="event-body">
+                        <h3 class="event-title">ROBOTIC WORKSHOP</h3>
+                        <div class="event-tagline">LEARN · DESIGN · BUILD · INNOVATE</div>
+                        <div class="event-footer-link">
+                            <span>View Program Details</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 06 -->
+                <div class="event-card glass-panel hud-brackets reveal" data-category="WORKSHOP">
+                    <div class="event-image-wrap">
+                        <img src="assets/events/6.webp" alt="HACKATHON Poster" class="event-image" loading="lazy">
+                        <span class="event-category-badge">WORKSHOP</span>
+                    </div>
+                    <div class="event-body">
+                        <h3 class="event-title">HACKATHON</h3>
+                        <div class="event-tagline">CODE · INNOVATE · AUTOMATE</div>
+                        <div class="event-footer-link">
+                            <span>View Program Details</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 07 -->
+                <div class="event-card glass-panel hud-brackets reveal" data-category="CHALLENGE">
+                    <div class="event-image-wrap">
+                        <img src="assets/events/7.webp" alt="ROBO AERO Poster" class="event-image" loading="lazy">
+                        <span class="event-category-badge">CHALLENGE</span>
+                    </div>
+                    <div class="event-body">
+                        <h3 class="event-title">ROBO AERO</h3>
+                        <div class="event-tagline">PLAY · SOLVE · LAUGH · FLY HIGH!</div>
+                        <div class="event-footer-link">
+                            <span>View Program Details</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 08 -->
+                <div class="event-card glass-panel hud-brackets reveal" data-category="CHALLENGE">
+                    <div class="event-image-wrap">
+                        <img src="assets/events/8.webp" alt="ESCAPE PARADISE Poster" class="event-image" loading="lazy">
+                        <span class="event-category-badge">CHALLENGE</span>
+                    </div>
+                    <div class="event-body">
+                        <h3 class="event-title">ESCAPE PARADISE</h3>
+                        <div class="event-tagline">NAVIGATE · UNLOCK · ESCAPE</div>
+                        <div class="event-footer-link">
+                            <span>View Program Details</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 09 -->
+                <div class="event-card glass-panel hud-brackets reveal" data-category="TALK">
+                    <div class="event-image-wrap">
+                        <img src="assets/events/9.webp" alt="INDUSTRY TALK Poster" class="event-image" loading="lazy">
+                        <span class="event-category-badge">TALK</span>
+                    </div>
+                    <div class="event-body">
+                        <h3 class="event-title">INDUSTRY TALK</h3>
+                        <div class="event-tagline">INSIGHTS · INNOVATION · IMPACT</div>
+                        <div class="event-footer-link">
+                            <span>View Program Details</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 10 -->
+                <div class="event-card glass-panel hud-brackets reveal" data-category="COMMUNITY">
+                    <div class="event-image-wrap">
+                        <img src="assets/events/10.webp" alt="AWARENESS MARATHON Poster" class="event-image" loading="lazy">
+                        <span class="event-category-badge">COMMUNITY</span>
+                    </div>
+                    <div class="event-body">
+                        <h3 class="event-title">AWARENESS MARATHON</h3>
+                        <div class="event-tagline">RUN FOR A CAUSE · RUN FOR CHANGE</div>
+                        <div class="event-footer-link">
+                            <span>View Program Details</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 11 -->
+                <div class="event-card glass-panel hud-brackets reveal" data-category="DESIGN">
+                    <div class="event-image-wrap">
+                        <img src="assets/events/11.webp" alt="CADCRAFT Poster" class="event-image" loading="lazy">
+                        <span class="event-category-badge">DESIGN</span>
+                    </div>
+                    <div class="event-body">
+                        <h3 class="event-title">CADCRAFT</h3>
+                        <div class="event-tagline">CRAFT YOUR INNOVATION</div>
+                        <div class="event-footer-link">
+                            <span>View Program Details</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 12 -->
+                <div class="event-card glass-panel hud-brackets reveal" data-category="E-SPORTS">
+                    <div class="event-image-wrap">
+                        <img src="assets/events/12.webp" alt="DRONE SIMULATION RACE Poster" class="event-image" loading="lazy">
+                        <span class="event-category-badge">E-SPORTS</span>
+                    </div>
+                    <div class="event-body">
+                        <h3 class="event-title">DRONE SIMULATION RACE</h3>
+                        <div class="event-tagline">SIMULATE · NAVIGATE · COMPETE</div>
+                        <div class="event-footer-link">
+                            <span>View Program Details</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Executives Section -->
+    <section id="executives" class="executives">
+        <div class="container">
+            <div class="section-tag">LEADERSHIP</div>
+            <h2 class="section-title">MEET OUR EXECUTIVES</h2>
+            <p class="section-subtitle">The student leaders and faculty mentors driving robotics innovation at MSEC.</p>
+
+            <!-- Faculty Advisors -->
+            <div class="exec-group-title">FACULTY ADVISORS & MENTORS</div>
+            <div class="exec-grid-faculty">
+                <!-- Dr. M. Thiyagu -->
+                <div class="profile-card glass-panel hud-brackets reveal">
+                    <div class="avatar-wrapper">
+                        <img src="assets/executives/thiyagu.png" alt="Dr. M. THIYAGU" class="profile-avatar" loading="lazy">
+                    </div>
+                    <span class="role-badge faculty-badge">Faculty Advisor & Club Incharge</span>
+                    <h3 class="profile-name">Dr. M. THIYAGU</h3>
+                    <p class="profile-dept">Mechanical Engineering Department</p>
+                </div>
+
+                <!-- Dr. R. Mahalakshmi -->
+                <div class="profile-card glass-panel hud-brackets reveal">
+                    <div class="avatar-wrapper">
+                        <img src="assets/executives/mahalakshmi.jpeg" alt="Dr. R. MAHALAKSHMI" class="profile-avatar" loading="lazy">
+                    </div>
+                    <span class="role-badge faculty-badge">Faculty Advisor & Club Mentor</span>
+                    <h3 class="profile-name">Dr. R. MAHALAKSHMI</h3>
+                    <p class="profile-dept">Electrical & Electronics Engineering</p>
+                </div>
+            </div>
+
+            <!-- Student Leadership -->
+            <div class="exec-group-title">STUDENT LEADERSHIP</div>
+            <div class="exec-grid-leadership">
+                <!-- K.S. Vignesh -->
+                <div class="profile-card glass-panel hud-brackets reveal">
+                    <div class="avatar-wrapper">
+                        <img src="assets/executives/vignesh.jpeg" alt="K.S. VIGNESH" class="profile-avatar" loading="lazy">
+                    </div>
+                    <span class="role-badge">President</span>
+                    <h3 class="profile-name">K.S. VIGNESH</h3>
+                    <p class="profile-dept">EEE — III Year</p>
+                </div>
+
+                <!-- Santhosh Kumar M -->
+                <div class="profile-card glass-panel hud-brackets reveal">
+                    <div class="avatar-wrapper">
+                        <img src="assets/executives/santhosh.jpg" alt="SANTHOSH KUMAR M" class="profile-avatar" loading="lazy">
+                    </div>
+                    <span class="role-badge">Vice President</span>
+                    <h3 class="profile-name">SANTHOSH KUMAR M</h3>
+                    <p class="profile-dept">MECH — III Year</p>
+                </div>
+
+                <!-- Monishwaran K -->
+                <div class="profile-card glass-panel hud-brackets reveal">
+                    <div class="avatar-wrapper">
+                        <img src="assets/executives/monishwaran.jpg" alt="MONISHWARAN K" class="profile-avatar" loading="lazy">
+                    </div>
+                    <span class="role-badge">Secretary</span>
+                    <h3 class="profile-name">MONISHWARAN K</h3>
+                    <p class="profile-dept">MECH — III Year</p>
+                </div>
+
+                <!-- Sai Balaji B.S -->
+                <div class="profile-card glass-panel hud-brackets reveal">
+                    <div class="avatar-wrapper">
+                        <img src="assets/executives/saibalaji.png" alt="SAI BALAJI B.S" class="profile-avatar" loading="lazy">
+                    </div>
+                    <span class="role-badge">Joint Secretary</span>
+                    <h3 class="profile-name">SAI BALAJI B.S</h3>
+                    <p class="profile-dept">EEE — III Year</p>
+                </div>
+
+                <!-- Jashwin S -->
+                <div class="profile-card glass-panel hud-brackets reveal">
+                    <div class="avatar-wrapper">
+                        <img src="assets/executives/jashwin.jpeg" alt="JASHWIN S" class="profile-avatar" loading="lazy">
+                    </div>
+                    <span class="role-badge">Treasurer</span>
+                    <h3 class="profile-name">JASHWIN S</h3>
+                    <p class="profile-dept">MECH — III Year</p>
+                </div>
+
+                <!-- Kirti R -->
+                <div class="profile-card glass-panel hud-brackets reveal">
+                    <div class="avatar-wrapper">
+                        <img src="assets/executives/kirti.jpeg" alt="KIRTI R" class="profile-avatar" loading="lazy">
+                    </div>
+                    <span class="role-badge">Joint Treasurer</span>
+                    <h3 class="profile-name">KIRTI R</h3>
+                    <p class="profile-dept">EEE — III Year</p>
+                </div>
+            </div>
+
+            <!-- Executive Members -->
+            <div class="exec-group-title">EXECUTIVE MEMBERS</div>
+            <div class="exec-grid-members">
+                <!-- Jai Ashwin R M -->
+                <div class="profile-card glass-panel hud-brackets reveal">
+                    <div class="avatar-wrapper">
+                        <img src="assets/executives/jaiashwin.png" alt="JAI ASHWIN R M" class="profile-avatar" loading="lazy">
+                    </div>
+                    <span class="role-badge">Executive Member</span>
+                    <h3 class="profile-name">JAI ASHWIN R M</h3>
+                    <p class="profile-dept">MECH — II Year</p>
+                </div>
+
+                <!-- Mohan Kumar B -->
+                <div class="profile-card glass-panel hud-brackets reveal">
+                    <div class="avatar-wrapper">
+                        <img src="assets/executives/mohan.png" alt="MOHAN KUMAR B" class="profile-avatar" loading="lazy">
+                    </div>
+                    <span class="role-badge">Executive Member</span>
+                    <h3 class="profile-name">MOHAN KUMAR B</h3>
+                    <p class="profile-dept">MECH — II Year</p>
+                </div>
+
+                <!-- Akshayan S -->
+                <div class="profile-card glass-panel hud-brackets reveal">
+                    <div class="avatar-wrapper">
+                        <img src="assets/executives/akshayan.png" alt="AKSHAYAN S" class="profile-avatar" loading="lazy">
+                    </div>
+                    <span class="role-badge">Executive Member</span>
+                    <h3 class="profile-name">AKSHAYAN S</h3>
+                    <p class="profile-dept">MECH — II Year</p>
+                </div>
+
+                <!-- Sabarine S -->
+                <div class="profile-card glass-panel hud-brackets reveal">
+                    <div class="avatar-wrapper">
+                        <img src="assets/executives/sabarine.png" alt="SABARINE S" class="profile-avatar avatar-top-fit" loading="lazy">
+                    </div>
+                    <span class="role-badge">Executive Member</span>
+                    <h3 class="profile-name">SABARINE S</h3>
+                    <p class="profile-dept">EEE — III Year</p>
+                </div>
+
+                <!-- Girish Kumar -->
+                <div class="profile-card glass-panel hud-brackets reveal">
+                    <div class="avatar-wrapper">
+                        <img src="assets/executives/girish.png" alt="GIRISH KUMAR" class="profile-avatar" loading="lazy">
+                    </div>
+                    <span class="role-badge">Executive Member</span>
+                    <h3 class="profile-name">GIRISH KUMAR</h3>
+                    <p class="profile-dept">EEE — II Year</p>
+                </div>
+
+                <!-- Varsha Shree P -->
+                <div class="profile-card glass-panel hud-brackets reveal">
+                    <div class="avatar-wrapper">
+                        <img src="assets/executives/varshashree.png" alt="VARSHA SHREE P" class="profile-avatar" loading="lazy">
+                    </div>
+                    <span class="role-badge">Executive Member</span>
+                    <h3 class="profile-name">VARSHA SHREE P</h3>
+                    <p class="profile-dept">EEE — II Year</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-tag">COMMUNICATION</div>
+            <h2 class="section-title">GET IN TOUCH</h2>
+            <p class="section-subtitle">We build. We listen. We ship.</p>
+
+            <div class="contact-grid">
+                <!-- Contact Info Card -->
+                <div class="contact-info-card glass-panel hud-brackets reveal">
+                    <h3 class="contact-info-title">Robotics Engineering Laboratory</h3>
+                    <p class="contact-info-desc">Reach out for project collaborations, event registrations, technical workshops, or general club inquiries.</p>
+
+                    <div class="contact-detail-item">
+                        <div class="contact-detail-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <div class="contact-detail-text">
+                            <h5>LABORATORY LOCATION</h5>
+                            <p>
+                                ROBOTICS & DRONES CLUB<br>
+                                Mechanical Block 363, Arcot Road, Puliyur 1st Main Rd, Subedar Colony, Kodambakkam, Chennai – 600024
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="contact-detail-item">
+                        <div class="contact-detail-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </div>
+                        <div class="contact-detail-text">
+                            <h5>OFFICIAL EMAIL</h5>
+                            <a href="mailto:roboticsdroneclub2k26@gmail.com">roboticsdroneclub2k26@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form Card -->
+                <div class="contact-form-card glass-panel hud-brackets reveal">
+                    <form id="contact-form" novalidate>
+                        <div class="form-group">
+                            <label for="form-name" class="form-label">Full Name</label>
+                            <input type="text" id="form-name" class="form-input" placeholder="e.g. Vignesh K.S." required>
+                            <div class="form-error">Please enter your name.</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="form-email" class="form-label">Email Address</label>
+                            <input type="email" id="form-email" class="form-input" placeholder="name@domain.com" required>
+                            <div class="form-error">Please enter a valid email address.</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="form-message" class="form-label">Message / Inquiry</label>
+                            <textarea id="form-message" class="form-textarea" placeholder="Tell us about your project interest or question..." required></textarea>
+                            <div class="form-error">Please enter a message.</div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            SEND MESSAGE →
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join CTA Section -->
+    <section id="cta">
+        <div class="container">
+            <div class="cta-panel glass-panel hud-brackets reveal">
+                <h2 class="cta-title">READY TO BUILD THE FUTURE?</h2>
+                <p class="cta-subtitle">Join a build-first community where ideas become intelligent machines and autonomous flight systems.</p>
+                <a href="#contact" class="btn btn-primary" style="font-size: 1rem; padding: 1.1rem 2.5rem;">
+                    JOIN THE CLUB →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo-row">
+                        <img src="assets/logo.png" alt="Logo" class="footer-logo">
+                        <span class="footer-brand-name">ROBOTICS & DRONES CLUB</span>
+                    </div>
+                    <p class="footer-desc">
+                        Meenakshi Sundararajan Engineering College (MSEC). Transforming passionate engineering students into industry-ready robotics and autonomous UAV engineers.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Quick Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="#hero" class="footer-link">Home</a></li>
+                        <li><a href="#about" class="footer-link">About Us</a></li>
+                        <li><a href="#objectives" class="footer-link">12 Objectives</a></li>
+                        <li><a href="#events" class="footer-link">Events & Programs</a></li>
+                        <li><a href="#executives" class="footer-link">Team</a></li>
+                        <li><a href="#contact" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Connect With Us</h4>
+                    <div class="footer-social-links">
+                        <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="LinkedIn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                        </a>
+                        <a href="https://github.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="GitHub">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>© 2026 Robotics & Drones Club — MSEC. All rights reserved.</span>
+                <span>BUILD-FIRST ENGINEERING ECOSYSTEM</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Event Detail Modal Overlay -->
+    <div id="event-modal" class="modal-overlay" aria-hidden="true" role="dialog">
+        <div class="modal-container hud-brackets">
+            <button class="modal-close-btn" aria-label="Close modal">✕</button>
+            <img id="modal-img" src="" alt="Event Poster" class="modal-hero-img">
+            <div class="modal-content-body">
+                <span id="modal-badge" class="modal-badge">CATEGORY</span>
+                <h3 id="modal-title" class="modal-title">Event Title</h3>
+                <div id="modal-tagline" class="modal-tagline">Tagline</div>
+                <p id="modal-desc" class="modal-desc">Event description content goes here.</p>
+                
+                <div class="modal-highlights-title">KEY HIGHLIGHTS</div>
+                <ul id="modal-highlights" class="modal-highlights-list">
+                    <!-- Dynamic Items -->
+                </ul>
+
+                <a href="#contact" class="btn btn-primary" onclick="document.getElementById('event-modal').classList.remove('active'); document.body.style.overflow='';">
+                    REGISTER NOW / ENQUIRE
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main JavaScript Logic -->
+    <script src="script.js" defer></script>
+</body>
+</html>
