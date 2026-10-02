@@ -11,7 +11,7 @@ const links = [
 const socialLinks = [
   {
     icon: Linkedin,
-    href: "https://www.linkedin.com/in/monishwaran-k-b463a3363/",
+    href: "https://www.linkedin.com/in/robotics-and-drone-club-4a6790440",
     label: "LinkedIn",
   },
   {
@@ -21,7 +21,7 @@ const socialLinks = [
   },
   {
     icon: Instagram,
-    href: "#",
+    href: "https://www.instagram.com/robotics_drone_club_msec?igsh=bnVlNThkYmg5aGdy",
     label: "Instagram",
   },
 ];
