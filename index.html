@@ -46,10 +46,9 @@
             </nav>
 
             <div class="nav-cta">
-                <a href="#contact" class="btn btn-primary">
-                    JOIN THE CLUB
-                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </a>
+                <button class="btn btn-primary" data-action="join">
+                    JOIN THE CLUB →
+                </button>
             </div>
 
             <button class="mobile-toggle" aria-label="Toggle Navigation Menu">
@@ -77,7 +76,7 @@
                             EXPLORE THE CLUB
                             <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                         </a>
-                        <a href="#contact" class="btn btn-secondary">JOIN THE CLUB</a>
+                        <button class="btn btn-secondary" data-action="join">JOIN THE CLUB →</button>
                     </div>
                 </div>
 
@@ -797,8 +796,8 @@
             <div class="contact-grid">
                 <!-- Contact Info Card -->
                 <div class="contact-info-card glass-panel hud-brackets reveal">
-                    <h3 class="contact-info-title">Robotics Engineering Laboratory</h3>
-                    <p class="contact-info-desc">Reach out for project collaborations, event registrations, technical workshops, or general club inquiries.</p>
+                    <h3 class="contact-info-title">ROBOTICS & DRONES CLUB</h3>
+                    <p class="contact-info-desc">Meenakshi Sundararajan Engineering College. Reach out for project collaborations, event registrations, or general club inquiries.</p>
 
                     <div class="contact-detail-item">
                         <div class="contact-detail-icon">
@@ -807,9 +806,11 @@
                         <div class="contact-detail-text">
                             <h5>LABORATORY LOCATION</h5>
                             <p>
-                                ROBOTICS & DRONES CLUB<br>
-                                Mechanical Block 363, Arcot Road, Puliyur 1st Main Rd, Subedar Colony, Kodambakkam, Chennai – 600024
+                                363, Arcot Road, Puliyur 1st Main Rd, Subedar Colony, Kodambakkam, Chennai – 600024
                             </p>
+                            <a href="https://maps.google.com/?q=Meenakshi+Sundararajan+Engineering+College" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="margin-top: 0.85rem; padding: 0.5rem 1.1rem; font-size: 0.78rem;">
+                                VIEW ON GOOGLE MAPS →
+                            </a>
                         </div>
                     </div>
 
@@ -824,30 +825,28 @@
                     </div>
                 </div>
 
-                <!-- Contact Form Card -->
+                <!-- Working Formspree Contact Form Card -->
                 <div class="contact-form-card glass-panel hud-brackets reveal">
-                    <form id="contact-form" novalidate>
+                    <form id="contactForm" novalidate>
                         <div class="form-group">
-                            <label for="form-name" class="form-label">Full Name</label>
-                            <input type="text" id="form-name" class="form-input" placeholder="e.g. Vignesh K.S." required>
-                            <div class="form-error">Please enter your name.</div>
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" name="name" id="name" class="form-input" placeholder="Your Name" required>
                         </div>
 
                         <div class="form-group">
-                            <label for="form-email" class="form-label">Email Address</label>
-                            <input type="email" id="form-email" class="form-input" placeholder="name@domain.com" required>
-                            <div class="form-error">Please enter a valid email address.</div>
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" name="email" id="email" class="form-input" placeholder="Your Email" required>
                         </div>
 
                         <div class="form-group">
-                            <label for="form-message" class="form-label">Message / Inquiry</label>
-                            <textarea id="form-message" class="form-textarea" placeholder="Tell us about your project interest or question..." required></textarea>
-                            <div class="form-error">Please enter a message.</div>
+                            <label for="message" class="form-label">Message / Inquiry</label>
+                            <textarea name="message" id="message" class="form-textarea" placeholder="Your Message" required></textarea>
                         </div>
 
                         <button type="submit" class="btn btn-primary" style="width: 100%;">
                             SEND MESSAGE →
                         </button>
+                        <div id="formStatus" style="margin-top: 1rem; font-family: var(--font-mono); font-size: 0.85rem;"></div>
                     </form>
                 </div>
             </div>
@@ -859,10 +858,10 @@
         <div class="container">
             <div class="cta-panel glass-panel hud-brackets reveal">
                 <h2 class="cta-title">READY TO BUILD THE FUTURE?</h2>
-                <p class="cta-subtitle">Join a build-first community where ideas become intelligent machines and autonomous flight systems.</p>
-                <a href="#contact" class="btn btn-primary" style="font-size: 1rem; padding: 1.1rem 2.5rem;">
+                <p class="cta-subtitle">Join a community where ideas become machines and autonomous flight systems.</p>
+                <button class="btn btn-primary" data-action="join" style="font-size: 1rem; padding: 1.1rem 2.5rem;">
                     JOIN THE CLUB →
-                </a>
+                </button>
             </div>
         </div>
     </section>
@@ -896,14 +895,14 @@
                 <div>
                     <h4 class="footer-heading">Connect With Us</h4>
                     <div class="footer-social-links">
-                        <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Instagram">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-                        </a>
-                        <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="LinkedIn">
+                        <a href="https://www.linkedin.com/in/robotics-and-drone-club-4a6790440" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
                         </a>
-                        <a href="https://github.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="GitHub">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                        <a href="mailto:roboticsdroneclub2k26@gmail.com" class="social-icon-btn" aria-label="Email Us">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </a>
+                        <a href="https://www.instagram.com/robotics_drone_club_msec?igsh=bnVlNThkYmg5aGdy" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
                         </a>
                     </div>
                 </div>
@@ -932,9 +931,9 @@
                     <!-- Dynamic Items -->
                 </ul>
 
-                <a href="#contact" class="btn btn-primary" onclick="document.getElementById('event-modal').classList.remove('active'); document.body.style.overflow='';">
-                    REGISTER NOW / ENQUIRE
-                </a>
+                <button class="btn btn-primary" data-action="join" onclick="document.getElementById('event-modal').classList.remove('active'); document.body.style.overflow='';">
+                    REGISTER NOW →
+                </button>
             </div>
         </div>
     </div>
